@@ -25,6 +25,9 @@
 
                  width: 103px;
                  height: 40px;
+                 @include tabletSize{
+                   margin-top: 10px;
+                 }
         }
 
 }
