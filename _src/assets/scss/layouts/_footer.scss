@@ -4,7 +4,7 @@
     justify-content: center;
     text-align: center;
 
-    @include tabletSize {
+    @include forTablet {
        flex-direction: row;
         justify-content: space-between;
       }
@@ -25,6 +25,10 @@
 
                  width: 103px;
                  height: 40px;
+
+            @include forTablet{
+              margin-top: 10px;
+            }
         }
 
 }

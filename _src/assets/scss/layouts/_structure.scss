@@ -6,6 +6,7 @@ body{
 .wrapper{
     padding: 0px 20px 0px 20px;
     border: 1px solid red;
+    
       @include forTablet{
         padding: 0px 40px 0px 40px;
       }
