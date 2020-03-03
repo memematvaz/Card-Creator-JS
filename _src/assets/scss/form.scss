@@ -1,6 +1,9 @@
-@import "utils/variables";
-@import "utils/mixins";
+@import 'core/normalize';
 
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'layouts/structure';
 @import 'layouts/header';
-@import "layouts/mainform";
-@import "layouts/footer";
+@import 'layouts/mainform';
+@import 'layouts/footer';

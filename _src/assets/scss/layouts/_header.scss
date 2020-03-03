@@ -1,5 +1,23 @@
-.pueba{
-    background-color: red;
-    height: 400px;
-    width: 100%;
+.header{
+    width:100%;
+    height: 111px;
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border: 1px solid green;
+
+    
+    .container{
+        height:50px;
+        width:200px;
+        background-image: url(../images/logo_awesome.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: black 1px solid;
+        margin-left:20px;
+            @include forTablet{
+                margin-left:0px;
+          }
+    }
 }
