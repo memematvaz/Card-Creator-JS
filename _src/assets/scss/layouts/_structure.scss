@@ -3,7 +3,7 @@ body{
     font-family: $mainFont ;
   }
 
-.wrapper{
+.wrapper-general{
     padding: 0px 20px 0px 20px;
     border: 1px solid red;
     
@@ -12,3 +12,19 @@ body{
       }
 }
 
+.wrapperMain{
+    padding: 0px 35px 0px 35px;
+      
+      @include forTablet{
+      padding: 0px 175px 0px 175px;
+    }
+  }
+
+.wrapperFooter{ /* lo he comprobado y queda bien */
+    border:solid orangered 2px;
+    padding: 10px 60px 10px 60px;
+
+    @include forTablet{
+    padding: 1px 40px 10px 40px;
+}
+}

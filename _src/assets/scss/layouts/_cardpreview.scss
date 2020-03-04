@@ -1,0 +1,131 @@
+
+.card--preview{
+    width:100%;
+    background: linear-gradient(180deg, rgba(191,205,208,1) 0%, rgba(221,233,237,1) 100%);
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+
+    .box--preview{
+        padding:38px 15px 40px 25px;
+
+        .button--preview{
+            border-radius:15px;
+            border: white 1px solid;
+            width:75px;
+            height:30px;
+            background-color: transparent;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom:20px;
+
+                &_icon{
+                    img{
+                        width:11px;
+                        margin-right:8px;
+                    }
+                }
+
+                &_text{
+                    color:$primaryTextColor;
+                    font-size:12px;
+                    text-transform: uppercase;
+                }
+        }
+
+        .image--preview{
+            width:240px;
+            height:329px;
+            background-color: white;
+            box-shadow:0px 1px 10px 0px rgba(0,0,0,0.2);
+
+            &_text{
+                height:75px;
+                display:flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items:center;
+                line-height: 20px;
+
+                    .preview--square{
+                        width:5px;
+                        height: 40px;
+                        background-color: $LandingButtonColor;
+                        margin-right:15px;
+                    }
+
+                    .card--full{
+                        &_name{
+                            color: $secondaryTextColor;
+                            font-family: $previewFont;
+                            font-weight: bold;
+                            font-size:18px;
+                            line-height: 1.11;
+                        }
+
+                        &_profession{
+                            color: $primaryTextColor;
+                            font-size: 16px;
+                            font-family: $previewFont;
+                            font-weight: normal;
+                            line-height: 1.25;
+                            margin-top: 3px;
+                        }
+                    }
+            }
+
+            &_picture{
+                width:100%;
+                height:200px;
+                background-image: url(../images/giphy.gif);
+                background-size: contain;
+                background-position: center;
+            }
+
+            &_icons{
+                display:flex;
+                justify-content: left;
+                margin-top: 10px;
+                margin-left:15px;
+
+                .preview{
+                    margin-right: 10px;
+                    width:32px;
+                    height:32px;
+                    border: 2px solid $ColorBorderIcon;
+                    border-radius: 16px;
+
+                    &.preview.icon--1{
+                        background-image: url(../images/smartphone.png);
+                        background-size: 70%;
+                        background-repeat: no-repeat;   
+                        background-position: center;
+                    }
+
+                    &.preview.icon--2{
+                        background-image: url(../images/email.png);
+                        background-size: 70%;
+                        background-repeat: no-repeat; 
+                        background-position: center;
+                    }
+
+                    &.preview.icon--3{
+                        background-image: url(../images/linkedin.png);
+                        background-size: 70%;
+                        background-repeat: no-repeat;  
+                        background-position: center; 
+                    }
+
+                    &.preview.icon--4{
+                        background-image: url(../images/github.png);
+                        background-size: 70%;
+                        background-repeat: no-repeat;   
+                        background-position: center;
+                    }
+                }
+            }           
+        }
+    }
+}
