@@ -3,10 +3,12 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-bottom: 20px;
 
     @include tabletSize {
        flex-direction: row;
         justify-content: space-between;
+        padding-bottom: 10px;
       }
     
 
@@ -21,10 +23,13 @@
 
     }
    
+
+
         & .logo-container img{
 
                  width: 103px;
                  height: 40px;
+                
         }
 
 }

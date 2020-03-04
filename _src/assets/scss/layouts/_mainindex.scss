@@ -1,0 +1,149 @@
+.mainindex__container {
+  background-color: $LandingBgColor;
+  padding-top: 75px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.mainindex__container--logo {
+  width: 250px;
+  height: 63px;
+
+  @include tabletSize {
+    width: 419px;
+    height: 105px;
+   }
+ 
+}
+
+.mainindex__container--logo img {
+  width: 100%;
+
+}
+
+.mainindex__container--text {
+  text-align: center;
+  margin-top: 35.4px;
+  margin-bottom: 17.8px;
+
+  & .mainindex__container--title {
+    font-family: $landingTitle;
+    color: $primaryColor;
+    font-size: 19.2px;
+    font-weight: 900;
+
+    @include tabletSize {
+        font-size: 24px;
+       }
+     
+  }
+  & .mainindex__container--prhase {
+    font-family: $mainFont;
+    color: $secondaryTextColor;
+    font-size: 12.8px;
+
+    @include tabletSize {
+        font-size: 16px;
+       }
+
+  }
+}
+
+.mainindex__container--typeface {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 38.6px;
+}
+
+.mainindex__container--typeface {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: centers;
+}
+
+.far {
+  color: $primaryColor;
+  width: 25px;
+  height: 26px;
+  font-size: 22.4px;
+
+  @include tabletSize {
+    height: 29px;
+    width: 32px;
+    font-size: 28px;
+   }
+}
+
+.fas {
+  color: $primaryColor;
+  width: 25px;
+  height: 26px;
+  font-size: 22.4px;
+
+  @include tabletSize {
+    height: 29px;
+    font-size: 28px;
+   }
+}
+
+.text-item {
+  font-family: $mainFont;
+  font-size: 12.8px;
+  font-weight: normal;
+  color: $primaryTextColor;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 7.8px;
+
+  @include tabletSize {
+    font-size: 16px;
+   }
+}
+
+.image-Designe {
+  padding-left: 20px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-complete {
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-share {
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mainindex__button {
+    font-family: $mainFont;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: $LandingButtonColor;
+    border-radius: 21px;
+    width: 129px;
+    height: 42px;
+    padding-top: 10px;
+
+
+  }
