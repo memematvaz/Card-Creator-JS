@@ -1,9 +1,138 @@
 .card--form{
     height: 100vh;
-    background-color: rgb(216, 216, 216);
 }
 
 /////////////////////////DESIGN
+
+.form__design{
+    padding-bottom: 20px;
+}
+
+.design--top {
+    border-bottom: solid 1px lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+        .title-icon{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            .far{
+                margin-right: 10px;
+                color: $primaryColor;
+            }
+            
+            .design-title{
+                font-size: 18px;
+                color: $primaryTextColor;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+
+        .design-arrow{
+            width: 16px;
+            height: 18px;
+            background-image: url(../images/arrow.png);
+            background-size: contain;
+        }
+}
+
+.design--bottom{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+
+    .design-subtitle{
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $primaryTextColor;
+    }
+
+    .color-form{
+        label{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .c1-1{
+                width: 30px;
+                height: 25px;
+                background-color: #114e4e;
+                margin-left: 10px;
+            }
+            .c1-2{
+                width: 30px;
+                height: 25px;
+                background-color: brown;
+            }
+            .c1-3{
+                width: 30px;
+                height: 25px;
+                background-color: burlywood;
+            }
+        }
+
+        label{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .c2-1{
+                width: 30px;
+                height: 25px;
+                background-color: green;
+                margin-left: 10px;
+            }
+            .c2-2{
+                width: 30px;
+                height: 25px;
+                background-color: lightgreen;
+                
+            }
+            .c2-3{
+                width: 30px;
+                height: 25px;
+                background-color: brown;
+            }
+        }
+
+        label{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .c3-1{
+                width: 30px;
+                height: 25px;
+                background-color: pink;
+                margin-left: 10px;
+            }
+            .c3-2{
+                width: 30px;
+                height: 25px;
+                background-color: fuchsia;;
+                
+            }
+            .c3-3{
+                width: 30px;
+                height: 25px;
+                background-color:  purple;;
+            }
+        }
+
+    }
+}
+
 
 /////////////////////////FILL
 
