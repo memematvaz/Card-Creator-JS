@@ -1,5 +1,6 @@
 .card--form{
     height: 100vh;
+    
 }
 
 /////////////////////////DESIGN
@@ -153,5 +154,86 @@
 
 
 /////////////////////////FILL
+.fill--top{
+    border-bottom: solid 1px lightgrey;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:7px;
+    padding-top:7px;
+        .title--icon{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            
 
+        
+            .fill--title{
+                text-transform: uppercase;
+                color:$primaryTextColor;
+                font-weight: bold;
+                font-weight: 600;
+            }
+            .far{
+                padding-right:10px;
+                color:#e17334;
+            }
+        }
+        .fill--button img{
+            width:16px;
+            height:18px;
+            
+        }
+}
+
+.fill--bottom{
+    border-bottom:solid 1px lightgrey;
+    padding-bottom:20px;
+    .fillform{
+        text-align:left;
+        color:$secondaryTextColor;
+        padding-top:20px;
+        font-size: 14px;
+            ::placeholder{
+                color:$PlaceHolderColor;
+                line-height: 20px;
+                font-size:14px;
+                padding-left:9px;
+            }
+            .label-fill{
+                display:block;
+                padding-bottom:7px;
+                
+                
+                }
+            .input-fill{
+                border:$ColorBorderIcon 1px solid;
+                width:100%;
+                height:30px;
+                margin-bottom:20px;
+                }
+            .bottom-2-box{ 
+                display:flex;
+                align-items: center;
+                .input-fill2{
+                    border:$ColorBorderIcon 1px solid;
+                    width:30px;
+                    height:30px;
+                    margin-left:20px;
+                    margin-bottom:20px;
+                }
+                .buttonform--image{
+                    border-radius: 3px;
+                    width:140px;
+                    height:30px;
+                    background-color:$primaryColor;
+                    color:white;
+                    font-size: 14px;
+                    font-family: $mainFont;
+                    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);margin-bottom:20px;
+                    
+            }
+        }
+        }
+    }
 /////////////////////////SHARE
