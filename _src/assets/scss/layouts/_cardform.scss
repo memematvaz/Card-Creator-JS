@@ -10,9 +10,13 @@
 
     @include forTablet{
         order: 1;
+
     }
 }
 
+.complete--form{
+    width:330px;
+}
 /////////////////////////DESIGN
 
 .form__design{
