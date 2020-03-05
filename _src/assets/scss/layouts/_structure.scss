@@ -21,10 +21,10 @@ body{
     }
   }
 
-.wrapperFooter{ 
-    padding: 10px 60px 10px 60px;
+.wrapperFooter{ /* lo he comprobado y queda bien */
+    padding: 18px 60px 20px 60px;
 
     @include forTablet{
-    padding: 1px 40px 10px 40px;
+    padding: 10px 40px 10px 40px;
 }
 }
