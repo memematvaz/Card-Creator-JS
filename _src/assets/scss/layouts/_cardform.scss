@@ -56,11 +56,17 @@
     }
 
     .color-form{
-        label{
+        #lab-1{
             display: flex;
             flex-direction: row;
             align-items: center;
             margin-bottom: 20px;
+
+            #color-option1{
+                width: 17px;
+                height: 17px;
+                cursor: pointer;
+            }
 
             .c1-1{
                 width: 30px;
@@ -71,62 +77,74 @@
             .c1-2{
                 width: 30px;
                 height: 25px;
-                background-color: brown;
+                background-color: #438792;
             }
             .c1-3{
                 width: 30px;
                 height: 25px;
-                background-color: burlywood;
+                background-color: #a2deaf;
             }
         }
 
-        label{
+        #lab-2{
             display: flex;
             flex-direction: row;
             align-items: center;
             margin-bottom: 20px;
 
+            #color-option2{
+                width: 17px;
+                height: 17px;
+                cursor: pointer;
+            }
+
             .c2-1{
                 width: 30px;
                 height: 25px;
-                background-color: green;
+                background-color: #420101;
                 margin-left: 10px;
             }
             .c2-2{
                 width: 30px;
                 height: 25px;
-                background-color: lightgreen;
+                background-color: #bd1010;
                 
             }
             .c2-3{
                 width: 30px;
                 height: 25px;
-                background-color: brown;
+                background-color: #e95626;
             }
         }
 
-        label{
+        #lab-3{
             display: flex;
             flex-direction: row;
             align-items: center;
             margin-bottom: 20px;
 
+            #color-option3{
+                width: 17px;
+                height: 17px;
+                cursor: pointer;
+            }
+
             .c3-1{
                 width: 30px;
                 height: 25px;
-                background-color: pink;
+                background-color: #3e5b65;
                 margin-left: 10px;
             }
             .c3-2{
                 width: 30px;
                 height: 25px;
-                background-color: fuchsia;;
+                background-color: #eab052;
                 
             }
             .c3-3{
                 width: 30px;
                 height: 25px;
-                background-color:  purple;;
+                background-color:  #a0c0cf;
             }
         }
 
