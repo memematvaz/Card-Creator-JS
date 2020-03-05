@@ -84,8 +84,13 @@
   .mainindex__container--typeface {
     padding-top: 15px;
     padding-bottom: 10px;
+    width: 100%;
+    max-width: 268px;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    @include forTablet{
+      max-width: 325px;
+    }
   }
 
   .far {
@@ -125,8 +130,8 @@
   }
 
   .image-Designe {
-    padding-left: 20px;
-    padding-right: 24px;
+    //padding-left: 20px;
+    //padding-right: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,7 +139,7 @@
   }
 
   .image-complete {
-    padding-right: 24px;
+    //padding-right: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +147,7 @@
   }
 
   .image-share {
-    padding-right: 20px;
+    //padding-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
