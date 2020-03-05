@@ -15,7 +15,9 @@
 }
 
 .complete--form{
+    @include forTablet{
     width:330px;
+}
 }
 /////////////////////////DESIGN
 
