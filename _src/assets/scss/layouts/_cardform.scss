@@ -1,6 +1,16 @@
+.main-form{
+    @include forTablet{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
 .card--form{
-    height: 100vh;
-    
+    padding-top:20px;
+
+    @include forTablet{
+        order: 1;
+    }
 }
 
 /////////////////////////DESIGN
@@ -35,7 +45,7 @@
             }
         }
 
-        .design-arrow{
+        .arrow{
             width: 16px;
             height: 18px;
             background-image: url(../images/arrow.png);
@@ -161,6 +171,7 @@
     justify-content: space-between;
     padding-bottom:7px;
     padding-top:7px;
+
         .title--icon{
             display:flex;
             flex-direction: row;
@@ -179,10 +190,12 @@
                 color:#e17334;
             }
         }
-        .fill--button img{
-            width:16px;
-            height:18px;
-            
+
+        .arrow{
+            width: 16px;
+            height: 18px;
+            background-image: url(../images/arrow.png);
+            background-size: contain;
         }
 }
 

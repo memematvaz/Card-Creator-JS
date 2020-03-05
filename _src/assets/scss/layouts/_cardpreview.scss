@@ -1,3 +1,11 @@
+.main-form{
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+        @include forTablet{
+            display:flex;
+            flex-direction: row;
+
+        }
+}
 
 .card--preview{
     width:100%;
@@ -6,6 +14,16 @@
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
+
+    @include forTablet{
+        order: 2;
+        margin-top:20px;
+        margin-right:40px;
+        margin-bottom:20px;
+
+    }
+    
+
 
     .box--preview{
         padding:38px 15px 40px 25px;
