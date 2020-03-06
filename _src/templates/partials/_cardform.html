@@ -1,59 +1,136 @@
 <section class="card--form">
-  <div class="wrapper-general"></div>
-  <form class="complete--form">
+  <div class="wrapper-general">
+    <form class="complete--form">
 
-    <div class="form__design">
-      <div class="design--top"></div>
-      <div class="design--bottom"></div>
-    </div>
+      <div class="form__design">
 
-    <div class="form__fill">
-      <div class="fill--top"></div>
-      <div class="fill--bottom"></div>
-    </div>
-
-    <div class="form__share">
-      <div class="share--top">
-        <div class="title--icon">
-
-          <i class="fas fa-share-alt"></i>
-
-
-          <h3 class="share--title">Comparte</h3>
+        <div class="design--top">
+          <div class="title-icon">
+            <i class="far fa-object-ungroup"></i>
+            <h3 class="design-title">diseña</h3>
+          </div>
+          <a class="arrow"></a>
         </div>
-        <a class="share--button">
-          <img src="./assets/images/arrow.png">
-        </a>
+
+        <div class="design--bottom">
+          <p class="design-subtitle">colores</p>
+
+          <div class="color-form">
+
+            <div>
+              <label id="lab-1" for="color-option1">
+                <input id="color-option1" type="radio" value="" name="color-option" />
+                <div class="c1-1"></div>
+                <div class="c1-2"></div>
+                <div class="c1-3"></div>
+              </label>
+            </div>
+
+            <div>
+              <label id="lab-2" for="color-option2">
+                <input id="color-option2" type="radio" value="" name="color-option" />
+                <div class="c2-1"></div>
+                <div class="c2-2"></div>
+                <div class="c2-3"></div>
+              </label>
+            </div>
+
+            <div>
+              <label id="lab-3" for="option3">
+                <input id="color-option3" type="radio" value="" name="color-option" />
+                <div class="c3-1"></div>
+                <div class="c3-2"></div>
+                <div class="c3-3"></div>
+              </label>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-    </div>
-    <div class="share--bottom">
+      <div class="form__fill">
+        <div class="fill--top">
+          <div class="title--icon">
+            <i class="far fa-keyboard fa-lg"></i>
+            <h3 class="fill--title">Rellena</h3>
+          </div>
+          <a class="fill--button">
+            <div class="arrow"> </div>
+          </a>
+        </div>
 
+        <div class="fill--bottom">
 
-      <div class="create-card--button">
-        <p class="create-card--text" title="Desplegar"><i class="far fa-address-card"></i>
-
-          Crear tarjeta</p>
+          <div class="fillform bottom-1">
+            <div class="fillform--name">
+              <label class="label-fill" for="firstName">Nombre completo</label>
+              <input placeholder="Sally Jill" class="input-fill" id="firstName" type="text" name="firstName" />
+            </div>
+            <div class="fillform--job">
+              <label class="label-fill" for="addjob">Puesto</label>
+              <input placeholder="Front-end unicorn" class="input-fill" id="addjob" type="text" name="addjob" />
+            </div>
+          </div>
+          <div class="fillform bottom-2">
+            <label class="label-fill" for="addimage">Imagen de perfil</label>
+            <div class="bottom-2-box">
+              <button class="buttonform--image">Añadir imagen</button>
+              <input class="input-fill2" id="addimage" type="text" name="addimage" />
+            </div>
+          </div>
+          <div class="fillform bottom-3">
+            <div class="fillform--email">
+              <label class="label-fill" for="addemail">Email</label>
+              <input class="input-fill" placeholder="sally-hill@gmail.com" id="addemail" type="email" name="addemail" />
+            </div>
+            <div class="fillform--phone">
+              <label class="label-fill" for="addphone">Teléfono</label>
+              <input placeholder="660632407" class="input-fill" id="addphone" type="text" name="addphone" />
+            </div>
+            <div class="fillform--linkedin">
+              <label class="label-fill" for="addlinkedin">Linkedin</label>
+              <input placeholder="linkedin.com/in/unicornfront" class="input-fill" id="addlinkedin" type="text"
+                name="addlinkedin" />
+            </div>
+            <div class="fillform--github">
+              <label class="label-fill" for="addgithub">Github</label>
+              <input placeholder="@sallyhill" class="input-fill" id="addgithub" type="text" name="addgithub" />
+            </div>
+          </div>
+        </div>
       </div>
 
-    </div>
 
-    <div class="created-card--container">
-      <h4 class="created-card--title">La tarjeta ha sido creada:</h4>
-      <a href="https://awesome-profile-card.com?id=A456DF0001" class="created-card--link"
-        title="Tarjeta de perfil">https://awesome-profile-card.com?id=A456DF0001</a>
-      <div class="twitter--button">
-        <a href="https://adalab.es/" class="twitter--link" title="Compartir en twitter"><i class="fab fa-twitter"></i>Compartir en twitter</a></div>
+      <div class="form__share">
+        <div class="share--top">
+          <div class="share--icon">
+            <i class="far fa-keyboard fa-lg"></i>
+            <h3 class="share--title">comparte</h3>
+          </div>
+          <a class="share--button">
+            <div class="arrow"> </div>
+          </a>
+        </div>
 
-    </div>
+        <div class="share--bottom">
 
-    </div>
+          <div class="create-card--button">
+            <p class="create-card--text" title="Desplegar"><i class="far fa-address-card"></i>
 
-    </div>
+              Crear tarjeta</p>
+          </div>
 
+          <div class="created-card--container">
+            <h4 class="created-card--title">La tarjeta ha sido creada:</h4>
+            <a href="https://awesome-profile-card.com?id=A456DF0001" class="created-card--link"
+              title="Tarjeta de perfil">https://awesome-profile-card.com?id=A456DF0001</a>
+            <div class="twitter--button">
+              <a href="https://adalab.es/" class="twitter--link" title="Compartir en twitter"><i
+                  class="fab fa-twitter"></i>Compartir en twitter</a></div>
 
-    </div>
-
-  </form>
+          </div>
+        </div>
+      </div>
+    </form> 
   </div>
 </section>

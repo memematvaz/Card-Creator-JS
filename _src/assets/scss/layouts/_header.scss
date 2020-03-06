@@ -5,7 +5,6 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    border: 1px solid green;
 
     
     .container{
@@ -14,7 +13,6 @@
         background-image: url(../images/logo_awesome.svg);
         background-size: contain;
         background-repeat: no-repeat;
-        border: black 1px solid;
         margin-left:20px;
         
             @include forTablet{

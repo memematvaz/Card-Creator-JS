@@ -1,15 +1,23 @@
-.mainindex__container {
-    padding-top: 75px;
+.mainindex__container { 
+    padding-top: 95px;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    @include forTablet{
+      padding-bottom: 59px;
+    }
   }
 
   .mainindex__container--logo {
     width: 250px;
     height: 63px;
+    @include forTablet{
+    width: 419px;
+    height: 105px;
+    }
+    
   }
 
   .mainindex__container--logo img {
@@ -20,20 +28,31 @@
     text-align: center;
     margin-top: 35.4px;
     margin-bottom: 17.8px;
+    @include forTablet{
+      margin-top: 31px;
+      margin-bottom: 27px;
+    }
 
     & .mainindex__container--title {
       font-family: $landingTitle;
       color: $primaryColor;
       font-size: 19.2px;
       font-weight: 900;
+      @include forTablet{
+        font-size: 24px;
+      }
     }
 
     & .mainindex__container--prhase {
       font-family: $mainFont;
       color: $secondaryTextColor;
       font-size: 12.8px;
-      padding-left: 35px;
-      padding-right: 35px;
+      width: 264px;
+      @include forTablet{
+        width: 331px;
+        font-size: 16px;
+      }
+      
     }
   }
 
@@ -43,6 +62,9 @@
     justify-content: space-around;
     margin-bottom: 38.6px;
     border: solid 1.6px rgba(156, 105, 76, 0.3);
+    @include forTablet{
+      margin-bottom: 186px;
+    }
   }
 
   .mainindex__button {
@@ -62,8 +84,13 @@
   .mainindex__container--typeface {
     padding-top: 15px;
     padding-bottom: 10px;
+    width: 100%;
+    max-width: 268px;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    @include forTablet{
+      max-width: 325px;
+    }
   }
 
   .far {
@@ -71,6 +98,11 @@
     width: 25px;
     height: 26px;
     font-size: 22.4px;
+    @include forTablet{
+      width: 32px;
+      height: 29px;
+      font-size: 28px;
+    }
   }
 
   .fas {
@@ -78,6 +110,10 @@
     width: 25px;
     height: 26px;
     font-size: 22.4px;
+    @include forTablet{
+      height: 29px;
+      font-size: 28px;
+    }
   }
 
   .text-item {
@@ -88,11 +124,12 @@
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 7.8px;
+    @include forTablet{
+      font-size: 16px;
+    }
   }
 
   .image-Designe {
-    padding-left: 20px;
-    padding-right: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +137,7 @@
   }
 
   .image-complete {
-    padding-right: 24px;
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +145,6 @@
   }
 
   .image-share {
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;

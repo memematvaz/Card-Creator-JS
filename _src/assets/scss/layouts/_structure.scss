@@ -5,7 +5,7 @@ body{
 
 .wrapper-general{
     padding: 0px 20px 0px 20px;
-    border: 1px solid red;
+    
     
       @include forTablet{
         padding: 0px 40px 0px 40px;
@@ -22,9 +22,9 @@ body{
   }
 
 .wrapperFooter{ /* lo he comprobado y queda bien */
-    padding: 10px 60px 10px 60px;
+    padding: 18px 60px 20px 60px;
 
     @include forTablet{
-    padding: 1px 40px 10px 40px;
+    padding: 10px 40px 10px 40px;
 }
 }
