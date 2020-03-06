@@ -1,260 +1,276 @@
-.main-form{
-    @include forTablet{
-        display:flex;
-        flex-direction: row;
-    }
+.main-form {
+  @include forTablet {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-.card--form{
-    padding-top:20px;
+.card--form {
+  padding-top: 20px;
 
-    @include forTablet{
-        order: 1;
+  @include forTablet {
+    order: 1;
 
-    }
+  }
 }
 
-.complete--form{
-    @include forTablet{
-    width:330px;
+.complete--form {
+  @include forTablet {
+    width: 330px;
+  }
 }
-}
+
 /////////////////////////DESIGN
 
-.form__design{
-    padding-bottom: 20px;
+.form__design {
+  padding-bottom: 20px;
 }
 
 .design--top {
-    border-bottom: solid 1px lightgrey;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 7px;
-    padding-bottom: 7px;
+  border-bottom: solid 1px lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
-        .title-icon{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            
-            .far{
-                margin-right: 10px;
-                color: $primaryColor;
-            }
-            
-            .design-title{
-                font-size: 18px;
-                color: $primaryTextColor;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-        }
-
-        .arrow{
-            width: 16px;
-            height: 18px;
-            background-image: url(../images/arrow.png);
-            background-size: contain;
-        }
-}
-
-.design--bottom{
-    margin-top: 15px;
+  .title-icon {
     display: flex;
     flex-direction: row;
-    align-items: top;
-    justify-content: space-between;
+    align-items: center;
 
-    .design-subtitle{
-        text-transform: uppercase;
-        font-size: 14px;
-        color: $primaryTextColor;
+    .far {
+      margin-right: 10px;
+      color: $primaryColor;
     }
 
-    .color-form{
-        #lab-1{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 20px;
-
-            #color-option1{
-                width: 17px;
-                height: 17px;
-                cursor: pointer;
-            }
-
-            .c1-1{
-                width: 30px;
-                height: 25px;
-                background-color: #114e4e;
-                margin-left: 10px;
-            }
-            .c1-2{
-                width: 30px;
-                height: 25px;
-                background-color: #438792;
-            }
-            .c1-3{
-                width: 30px;
-                height: 25px;
-                background-color: #a2deaf;
-            }
-        }
-
-        #lab-2{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 20px;
-
-            #color-option2{
-                width: 17px;
-                height: 17px;
-                cursor: pointer;
-            }
-
-            .c2-1{
-                width: 30px;
-                height: 25px;
-                background-color: #420101;
-                margin-left: 10px;
-            }
-            .c2-2{
-                width: 30px;
-                height: 25px;
-                background-color: #bd1010;
-                
-            }
-            .c2-3{
-                width: 30px;
-                height: 25px;
-                background-color: #e95626;
-            }
-        }
-
-        #lab-3{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 20px;
-
-            #color-option3{
-                width: 17px;
-                height: 17px;
-                cursor: pointer;
-            }
-
-            .c3-1{
-                width: 30px;
-                height: 25px;
-                background-color: #3e5b65;
-                margin-left: 10px;
-            }
-            .c3-2{
-                width: 30px;
-                height: 25px;
-                background-color: #eab052;
-                
-            }
-            .c3-3{
-                width: 30px;
-                height: 25px;
-                background-color:  #a0c0cf;
-            }
-        }
-
+    .design-title {
+      font-size: 18px;
+      color: $primaryTextColor;
+      font-weight: bold;
+      text-transform: uppercase;
     }
+  }
+
+  .arrow {
+    width: 16px;
+    height: 18px;
+    background-image: url(../images/arrow.png);
+    background-size: contain;
+  }
+}
+
+.design--bottom {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+
+  .design-subtitle {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $primaryTextColor;
+  }
+
+  .color-form {
+    #lab-1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+
+      #color-option1 {
+        width: 17px;
+        height: 17px;
+        cursor: pointer;
+      }
+
+      .c1-1 {
+        width: 30px;
+        height: 25px;
+        background-color: #114e4e;
+        margin-left: 10px;
+      }
+
+      .c1-2 {
+        width: 30px;
+        height: 25px;
+        background-color: #438792;
+      }
+
+      .c1-3 {
+        width: 30px;
+        height: 25px;
+        background-color: #a2deaf;
+      }
+    }
+
+    #lab-2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+
+      #color-option2 {
+        width: 17px;
+        height: 17px;
+        cursor: pointer;
+      }
+
+      .c2-1 {
+        width: 30px;
+        height: 25px;
+        background-color: #420101;
+        margin-left: 10px;
+      }
+
+      .c2-2 {
+        width: 30px;
+        height: 25px;
+        background-color: #bd1010;
+
+      }
+
+      .c2-3 {
+        width: 30px;
+        height: 25px;
+        background-color: #e95626;
+      }
+    }
+
+    #lab-3 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+
+      #color-option3 {
+        width: 17px;
+        height: 17px;
+        cursor: pointer;
+      }
+
+      .c3-1 {
+        width: 30px;
+        height: 25px;
+        background-color: #3e5b65;
+        margin-left: 10px;
+      }
+
+      .c3-2 {
+        width: 30px;
+        height: 25px;
+        background-color: #eab052;
+
+      }
+
+      .c3-3 {
+        width: 30px;
+        height: 25px;
+        background-color: #a0c0cf;
+      }
+    }
+
+  }
 }
 
 
 /////////////////////////FILL
-.fill--top{
-    border-bottom: solid 1px lightgrey;
-    display:flex;
+.fill--top {
+  border-bottom: solid 1px lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  padding-top: 7px;
+
+  .title--icon {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom:7px;
-    padding-top:7px;
 
-        .title--icon{
-            display:flex;
-            flex-direction: row;
-            align-items: center;
-            
 
-        
-            .fill--title{
-                text-transform: uppercase;
-                color:$primaryTextColor;
-                font-weight: bold;
-                font-weight: 600;
-            }
-            .far{
-                padding-right:10px;
-                color:#e17334;
-            }
-        }
 
-        .arrow{
-            width: 16px;
-            height: 18px;
-            background-image: url(../images/arrow.png);
-            background-size: contain;
-        }
+    .fill--title {
+      text-transform: uppercase;
+      color: $primaryTextColor;
+      font-weight: bold;
+      font-weight: 600;
+    }
+
+    .far {
+      padding-right: 10px;
+      color: #e17334;
+    }
+  }
+
+  .arrow {
+    width: 16px;
+    height: 18px;
+    background-image: url(../images/arrow.png);
+    background-size: contain;
+  }
 }
 
-.fill--bottom{
-  border-bottom:solid 1px lightgrey;
-  padding-bottom:20px;
-  .fillform{
-      text-align:left;
-      color:$secondaryTextColor;
-      padding-top:20px;
+.fill--bottom {
+  border-bottom: solid 1px lightgrey;
+  padding-bottom: 20px;
+
+  .fillform {
+    text-align: left;
+    color: $secondaryTextColor;
+    padding-top: 20px;
+    font-size: 14px;
+
+    ::placeholder {
+      color: $PlaceHolderColor;
+      line-height: 20px;
       font-size: 14px;
-          ::placeholder{
-              color:$PlaceHolderColor;
-              line-height: 20px;
-              font-size:14px;
-              padding-left:9px;
-          }
-          .label-fill{
-              display:block;
-              padding-bottom:7px;
-              
-              
-              }
-          .input-fill{
-              border:$ColorBorderIcon 1px solid;
-              width:100%;
-              height:30px;
-              margin-bottom:20px;
-              }
-          .bottom-2-box{ 
-              display:flex;
-              align-items: center;
-              .input-fill2{
-                  border:$ColorBorderIcon 1px solid;
-                  width:30px;
-                  height:30px;
-                  margin-left:20px;
-                  margin-bottom:20px;
-              }
-              .buttonform--image{
-                  border-radius: 3px;
-                  width:140px;
-                  height:30px;
-                  background-color:$primaryColor;
-                  color:white;
-                  font-size: 14px;
-                  font-family: $mainFont;
-                  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);margin-bottom:20px;
-                  
-          }
+      padding-left: 9px;
+    }
+
+    .label-fill {
+      display: block;
+      padding-bottom: 7px;
+
+
+    }
+
+    .input-fill {
+      border: $ColorBorderIcon 1px solid;
+      width: 100%;
+      height: 30px;
+      margin-bottom: 20px;
+    }
+
+    .bottom-2-box {
+      display: flex;
+      align-items: center;
+
+      .input-fill2 {
+        border: $ColorBorderIcon 1px solid;
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        margin-bottom: 20px;
       }
+
+      .buttonform--image {
+        border-radius: 3px;
+        width: 140px;
+        height: 30px;
+        background-color: $primaryColor;
+        color: white;
+        font-size: 14px;
+        font-family: $mainFont;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+        margin-bottom: 20px;
+
       }
+    }
   }
+}
 
 /////////////////////////SHARE
 
@@ -267,10 +283,15 @@
   padding-top: 10px;
   width: 100%;
 
-  .title--icon {
+  .share--icon {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    .fas {
+      padding-right: 10px;
+      color: #e17334;
+    }
 
     .share--title {
       text-transform: uppercase;
@@ -278,27 +299,27 @@
       font-weight: bold;
       font-weight: 600;
     }
-
-    .fas {
-      padding-right: 10px;
-      color: #e17334;
-    }
   }
 
-  .share--button img {
+  .arrow {
     width: 16px;
     height: 18px;
+    background-image: url(../images/arrow.png);
+    background-size: contain;
   }
+
 }
+
+
 
 
 .share--bottom {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 25px;
   padding-top: 20px;
-  border-bottom: solid 1px lightgrey;
 
   .create-card--button {
 
@@ -309,6 +330,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+
 
     .create-card--text {
       font-size: 18px;
@@ -320,6 +346,12 @@
       }
     }
   }
+}
+
+.border--line {
+  border-bottom: solid 1px lightgrey;
+  height: 1px;
+  width: 100%;
 }
 
 .created-card--container {
@@ -335,6 +367,8 @@
     font-size: 18px;
     padding-bottom: 7px;
     padding-top: 7px;
+    color: $primaryTextColor;
+    font-weight: 600;
   }
 
   & .created-card--link {
@@ -343,13 +377,15 @@
     font-size: 12px;
     padding-bottom: 7px;
     padding-top: 7px;
+    font-weight: bold;
   }
 
   & .twitter--button {
-      width: 181px;
+    width: 181px;
     height: 30px;
     background-color: #00a0f5;
     margin: 10px;
+    margin-bottom: 30px;
 
     border-radius: 3px;
 
