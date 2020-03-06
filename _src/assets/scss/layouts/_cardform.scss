@@ -1,10 +1,116 @@
-.card--form{
-    height: 100vh;
-    background-color: rgb(216, 216, 216);
-}
-
 /////////////////////////DESIGN
 
 /////////////////////////FILL
 
 /////////////////////////SHARE
+
+.share--top {
+  border-bottom: solid 1px lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+
+  .title--icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .share--title {
+      text-transform: uppercase;
+      color: $primaryTextColor;
+      font-weight: bold;
+      font-weight: 600;
+    }
+
+    .fas {
+      padding-right: 10px;
+      color: #e17334;
+    }
+  }
+
+  .share--button img {
+    width: 16px;
+    height: 18px;
+  }
+}
+
+
+.share--bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  padding-top: 20px;
+  border-bottom: solid 1px lightgrey;
+
+  .create-card--button {
+
+    background-color: $primaryColor;
+    width: 199px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .create-card--text {
+      font-size: 18px;
+      color: white;
+      text-transform: uppercase;
+
+      .far {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.created-card--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: solid 1px lightgrey;
+
+  .created-card--title {
+    font-size: 18px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+
+  & .created-card--link {
+    text-decoration: none;
+    color: $primaryColor;
+    font-size: 12px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+
+  & .twitter--button {
+      width: 181px;
+    height: 30px;
+    background-color: #00a0f5;
+    margin: 10px;
+
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .twitter--link {
+      color: white;
+      font-size: 14px;
+      padding: 3px;
+
+      .fab {
+        padding-right: 10px;
+      }
+    }
+  }
+}
