@@ -344,6 +344,10 @@
     margin-bottom: 30px;
     margin-top: 20px;
 
+    &--active{
+      background-color: #d5d5d5;
+    }
+
 
     .create-card--text {
       font-size: 18px;
@@ -364,13 +368,18 @@
 }
 
 .created-card--container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  border-bottom: solid 1px lightgrey;
+  display: none;
+
+  &--visible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: solid 1px lightgrey;
+
+  }
 
   .created-card--title {
     font-size: 18px;
