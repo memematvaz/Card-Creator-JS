@@ -308,18 +308,27 @@
     background-size: contain;
   }
 
+  &--active .arrow {
+    transform: rotateX(180deg);
+  }
+
 }
 
 
 
 
 .share--bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 25px;
-  padding-top: 20px;
+  display: none;
+  
+
+  &--visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 20px;
+  }
 
   .create-card--button {
 
