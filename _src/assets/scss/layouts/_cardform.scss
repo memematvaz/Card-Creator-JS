@@ -58,14 +58,23 @@
     background-image: url(../images/arrow.png);
     background-size: contain;
   }
+
+  &--active .arrow {
+    transform: rotateX(180deg);
+  }
 }
 
 .design--bottom {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: top;
-  justify-content: space-between;
+  display: none;
+
+  &--visible {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+  }
+  
 
   .design-subtitle {
     text-transform: uppercase;
@@ -191,7 +200,6 @@
     align-items: center;
 
 
-
     .fill--title {
       text-transform: uppercase;
       color: $primaryTextColor;
@@ -211,11 +219,19 @@
     background-image: url(../images/arrow.png);
     background-size: contain;
   }
+
+    &--active .arrow {
+    transform: rotateX(180deg);
+  }
 }
 
 .fill--bottom {
-  border-bottom: solid 1px lightgrey;
-  padding-bottom: 20px;
+  display: none;
+
+  &--visible {
+    border-bottom: solid 1px lightgrey;
+    padding-bottom: 20px;
+  }
 
   .fillform {
     text-align: left;

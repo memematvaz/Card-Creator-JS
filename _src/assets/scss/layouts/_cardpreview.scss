@@ -71,13 +71,11 @@
                     .preview--square{
                         width:5px;
                         height: 40px;
-                        background-color: $LandingButtonColor;
                         margin-right:15px;
                     }
 
                     .card--full{
                         &_name{
-                            color: $secondaryTextColor;
                             font-family: $previewFont;
                             font-weight: bold;
                             font-size:18px;
@@ -85,9 +83,8 @@
                         }
 
                         &_profession{
-                            color: $primaryTextColor;
-                            font-size: 16px;
-                            font-family: $previewFont;
+                            font-size: 15px;
+                            font-family: 'Montserrat', sans-serif;
                             font-weight: normal;
                             line-height: 1.25;
                             margin-top: 3px;
@@ -113,32 +110,27 @@
                     margin-right: 10px;
                     width:32px;
                     height:32px;
-                    border: 2px solid $ColorBorderIcon;
                     border-radius: 16px;
 
                     &.preview.icon--1{
-                        background-image: url(../images/smartphone.png);
                         background-size: 70%;
                         background-repeat: no-repeat;   
                         background-position: center;
                     }
 
                     &.preview.icon--2{
-                        background-image: url(../images/email.png);
                         background-size: 70%;
                         background-repeat: no-repeat; 
                         background-position: center;
                     }
 
                     &.preview.icon--3{
-                        background-image: url(../images/linkedin.png);
                         background-size: 70%;
                         background-repeat: no-repeat;  
                         background-position: center; 
                     }
 
                     &.preview.icon--4{
-                        background-image: url(../images/github.png);
                         background-size: 70%;
                         background-repeat: no-repeat;   
                         background-position: center;
