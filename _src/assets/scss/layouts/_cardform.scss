@@ -1,4 +1,6 @@
 .main-form {
+  height: 77vh;
+
   @include forTablet {
     display: flex;
     flex-direction: row;

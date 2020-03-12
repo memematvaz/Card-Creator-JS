@@ -15,9 +15,10 @@ body{
 .wrapperMain{
     background-color: $LandingBgColor;
     padding: 0px 35px 0px 35px;
+    height: 90vh;
       
       @include forTablet{
-      padding: 0px 175px 0px 175px;
+        padding: 0px 175px 0px 175px;
     }
   }
 
