@@ -112,6 +112,29 @@ FillInputEmail.addEventListener('keypress', showIcon);
 FillInputLinkedin.addEventListener('keypress', showIcon);
 FillInputGithub.addEventListener('keypress', showIcon);
 
+
+// FILL AND ERRORS
+
+//ESTOS BORRAR
+//let inputName = document.querySelector('#firstName');
+//let inputJob = document.querySelector('#addjob');
+//const FillInputEmail = document.querySelector('#addemail');
+//const FillInputLinkedin = document.querySelector('#addlinkedin');
+//const FillInputGithub = document.querySelector('#addgithub');
+//HASTA AQUÍ
+//const inputError = document.querySelector('#text-error');
+
+//if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputError.value)) {
+  //  inputName.classList.remove('input-error');
+   // inputError.classList.add('hidden');
+   // return (true);
+//} else {
+//    inputEmail.classList.add('input-error');
+  //  emailError.classList.remove('hidden');
+  //  return (false);
+//}
+
+
 //DESING COMPARTE
 
 const shareTop = document.querySelector('.share--top');

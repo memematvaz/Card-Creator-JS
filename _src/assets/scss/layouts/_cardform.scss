@@ -1,6 +1,4 @@
 .main-form {
-  height: 77vh;
-
   @include forTablet {
     display: flex;
     flex-direction: row;
@@ -12,7 +10,6 @@
 
   @include forTablet {
     order: 1;
-
   }
 }
 
@@ -275,13 +272,12 @@
     }
 
     .input-fill {
-      border: $ColorBorderIcon 1px solid;
       width: 100%;
       height: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 2px;
     }
 
-    .bottom-2-box {
+    .bottom-2-box{
       display: flex;
       align-items: center;
 
@@ -307,6 +303,7 @@
     }
   }
 }
+
 
 /////////////////////////SHARE
 

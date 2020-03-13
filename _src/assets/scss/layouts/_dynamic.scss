@@ -128,3 +128,22 @@
         background-image: url(../images/github-c3.png);
     }
 }
+
+.input-error{
+    border: red 1px solid;
+}
+
+.input-correct{
+    border: #a2deaf 1px solid;
+    margin-bottom: 20px;
+}
+
+.text-error{
+    font-size: 12px;
+    color: red;
+    margin-bottom: 20px
+}
+
+#addphone{
+    margin-bottom: 20px;
+}
