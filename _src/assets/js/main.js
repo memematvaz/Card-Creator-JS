@@ -164,18 +164,36 @@ createButton.addEventListener('click', onClickCreateButton);
 const resetButton = document.querySelector('.button--preview');
 
 function reset() {
+  
   inputName.value = '';
   inputJob.value = '';
-  FillInputPhone = '';
-  FillInputEmail = '';
-  FillInputGithub ='';  
-  FillInputLinkedin='';
+  FillInputPhone.value = '';
+  FillInputEmail.value = '';
+  FillInputGithub.value ='';  
+  FillInputLinkedin.value='';
   cardFullName.innerHTML = 'Nombre Apellidos';
   cardFullProfession.innerHTML = 'Front-end developer';
+  
+  
+  
+    FillIconPhone.classList.add('hidden--fill');
+    FillIconEmail.classList.add('hidden--fill');
+    FillIconLinkedin.classList.add('hidden--fill');
+    FillIconGithub.classList.add('hidden--fill');
 
+
+
+  
   changePalette1()
+  showIcon(event) 
+  chosenInput()
+
+
+
+
 
 }
+
 
 
 
@@ -190,7 +208,7 @@ resetButton.addEventListener('click', reset)
 
 /* 
   
-   
+  
   
     palette1.checked = true;
 
@@ -208,3 +226,5 @@ resetButton.addEventListener('click', reset)
     toggleDesign()
 
     cardShare.classList.add('hidden'); */
+
+    //  cardIcons.classList.add('hidden');
