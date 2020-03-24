@@ -200,7 +200,9 @@ createButton.addEventListener('click', onClickCreateButton);
 //TWITTER BUTTON
 const twitterButton = document.querySelector('.twitter--button');
 const twitterLink = document.querySelector('.twitter--link');
-twitterLink.setAttribute('href',"https://twitter.com/intent/tweet");
+const createCardLink = document.querySelector('.created-card--link');
+twitterLink.setAttribute('href',`https://twitter.com/intent/tweet?text=${createCardLink.innerText}`);
+twitterLink.setAttribute('target',"blank");
 
 
 
