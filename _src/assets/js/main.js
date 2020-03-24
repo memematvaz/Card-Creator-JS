@@ -181,7 +181,8 @@ function storeGithub() {
 
 const shareTop = document.querySelector('.share--top');
 const shareBottom = document.querySelector('.share--bottom');
-const createCardContainer = document.querySelector('created-card--container');
+const createCardContainer = document.querySelector('.created-card--container');// aquí no se estaba llamando a la clase//
+
 
 function onClickShareTop() {
   shareBottom.classList.toggle('share--bottom--visible');
@@ -195,6 +196,12 @@ function onClickCreateButton() {
 
 shareTop.addEventListener('click', onClickShareTop);
 createButton.addEventListener('click', onClickCreateButton);
+
+//TWITTER BUTTON
+const twitterButton = document.querySelector('.twitter--button');
+const twitterLink = document.querySelector('.twitter--link');
+twitterLink.setAttribute('href',"https://twitter.com/intent/tweet");
+
 
 
 // RESET BUTTON
