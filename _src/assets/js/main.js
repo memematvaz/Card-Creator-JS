@@ -80,7 +80,7 @@ const FillIconEmail = document.querySelector('#icon2');
 const FillIconLinkedin = document.querySelector('#icon3');
 const FillIconGithub = document.querySelector('#icon4');
 let FillInputPhone = document.querySelector('#addphone');
-let FillInputEmail = document.querySelector('#addemail');
+const FillInputEmail = document.querySelector('#addemail');
 let FillInputLinkedin = document.querySelector('#addlinkedin');
 let FillInputGithub = document.querySelector('#addgithub');
 const FillButtonClose = document.querySelector('.fill--buttton');
@@ -119,15 +119,18 @@ FillInputGithub.addEventListener('keypress', showIcon);
 
 // FILL AND ERRORS
 
-<<<<<<< HEAD
 const textErrorAll = document.querySelectorAll('.text-error');
 const inputFill = document.querySelectorAll('.input-fill');
 const fillForm = document.querySelectorAll('.fillform');
 const createButton = document.querySelector('.create-card--button');
 
+const nameError = document.querySelector('#text-error_name');
+const jobError = document.querySelector('#text-error_job');
+const linkedInError = document.querySelector('#text-error_linkedin');
+const gitHubError = document.querySelector('#text-error_git');
+const emailError = document.querySelector('.text-error_email')
 
-    function validateForm(){
-        
+    function validateForm(){  
      for(let myInput of inputFill){
         if(myInput.value !==""){
         myInput.classList.remove("input-error");
@@ -135,24 +138,20 @@ const createButton = document.querySelector('.create-card--button');
         }else{
         myInput.classList.remove("input-correct");
         myInput.classList.add("input-error");
-    }    
-    validateText(textErrorAll); 
+        }   
+        validateText();  
     }
-}
+    }
+
     
 
-    function validateText(textErrorAll){
-        for(let myInput of inputFill){
-        for (let item of textErrorAll){
-            if (myInput.value === ""){
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
-            }
+    function validateText(){
+        if(FillInputEmail !== ''){
+            emailError.classList.add('hidden')
+        }else{
+            emailError.classList.remove('hidden')
         }
-        //myInput.addEventListener('keyup', validateForm);
-    }}
-
+    }
 
 
 createButton.addEventListener('click', validateForm);
@@ -177,27 +176,6 @@ function storeLinkedin() {
 function storeGithub() {
     storedData.github = FillInputGithub.value, storeData()
   }
-=======
-//ESTOS BORRAR
-//let inputName = document.querySelector('#firstName');
-//let inputJob = document.querySelector('#addjob');
-//const FillInputEmail = document.querySelector('#addemail');
-//const FillInputLinkedin = document.querySelector('#addlinkedin');
-//const FillInputGithub = document.querySelector('#addgithub');
-//HASTA AQUÍ
-//const inputError = document.querySelector('#text-error');
-
-//if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputError.value)) {
-//  inputName.classList.remove('input-error');
-// inputError.classList.add('hidden');
-// return (true);
-//} else {
-//    inputEmail.classList.add('input-error');
-//  emailError.classList.remove('hidden');
-//  return (false);
-//}
->>>>>>> 35785eabed1d15ed4db9a22a4f122adfc935f292
-
 
 //DESING COMPARTE
 
@@ -210,20 +188,13 @@ function onClickShareTop() {
   shareTop.classList.toggle('share--top--active');
 }
 
-<<<<<<< HEAD
-function onClickCreateButton(){
-    createButton.classList.add('create-card--button--active');
-    //createCardContainer.classList.add('created-card--container--visible');
-=======
 function onClickCreateButton() {
   createButton.classList.add('create-card--button--active');
   createCardContainer.classList.add('created-card--container--visible');
->>>>>>> 35785eabed1d15ed4db9a22a4f122adfc935f292
 }
 
 shareTop.addEventListener('click', onClickShareTop);
 createButton.addEventListener('click', onClickCreateButton);
-
 
 
 // RESET BUTTON
@@ -240,57 +211,16 @@ function reset() {
   cardFullName.innerHTML = 'Nombre Apellidos';
   cardFullProfession.innerHTML = 'Front-end developer';
   
-  
-  
     FillIconPhone.classList.add('hidden--fill');
     FillIconEmail.classList.add('hidden--fill');
     FillIconLinkedin.classList.add('hidden--fill');
     FillIconGithub.classList.add('hidden--fill');
 
-
-
-  
   changePalette1()
   showIcon(event) 
   chosenInput()
 
-
-
-
-
 }
 
 
-
-
-
-
-
 resetButton.addEventListener('click', reset)
-
-
-
-
-
-/* 
-  
-  
-  
-    palette1.checked = true;
-
-    const imageUrl = './assets/images/profile-picture.gif';
-    profileImage.style.backgroundImage = `url(${imageUrl})`;
-    profilePreview.style.backgroundImage = `url(${imageUrl})`;
-
-    fillTelf();
-    fillEmail();
-    fillLinkedin();
-    fillGithub();
-    setTheme();
-
-    validateAll();
-    toggleDesign()
-
-    cardShare.classList.add('hidden'); */
-
-    //  cardIcons.classList.add('hidden');
