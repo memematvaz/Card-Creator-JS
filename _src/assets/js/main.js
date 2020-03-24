@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('hola'); 
+console.log('hola');
 
 
 //DESIGN COLOR
@@ -13,37 +13,37 @@ const inputColorPalette3 = document.querySelector('#color-option3')
 const cardDecoration = document.querySelector('#image--preview_text')
 const cardIcons = document.querySelector('#image--preview_icons')
 
-function onClickDesignTop(){
-    designBottom.classList.toggle('design--bottom--visible');
-    designTop.classList.toggle('design--top--active');
+function onClickDesignTop() {
+  designBottom.classList.toggle('design--bottom--visible');
+  designTop.classList.toggle('design--top--active');
 }
 
-function changePalette1(){
-    cardDecoration.classList.add('color-palette1');
-    cardIcons.classList.add('icon-palette1');
-    cardDecoration.classList.remove('color-palette2');
-    cardIcons.classList.remove('icon-palette2');
-    cardDecoration.classList.remove('color-palette3');
-    cardIcons.classList.remove('icon-palette3');
-    }
+function changePalette1() {
+  cardDecoration.classList.add('color-palette1');
+  cardIcons.classList.add('icon-palette1');
+  cardDecoration.classList.remove('color-palette2');
+  cardIcons.classList.remove('icon-palette2');
+  cardDecoration.classList.remove('color-palette3');
+  cardIcons.classList.remove('icon-palette3');
+}
 
-function changePalette2(){
-    cardDecoration.classList.add('color-palette2');
-    cardIcons.classList.add('icon-palette2');
-    cardDecoration.classList.remove('color-palette1');
-    cardIcons.classList.remove('icon-palette1');
-    cardDecoration.classList.remove('color-palette3');
-    cardIcons.classList.remove('icon-palette3');
-    }
+function changePalette2() {
+  cardDecoration.classList.add('color-palette2');
+  cardIcons.classList.add('icon-palette2');
+  cardDecoration.classList.remove('color-palette1');
+  cardIcons.classList.remove('icon-palette1');
+  cardDecoration.classList.remove('color-palette3');
+  cardIcons.classList.remove('icon-palette3');
+}
 
-function changePalette3(){
-    cardDecoration.classList.add('color-palette3');
-    cardIcons.classList.add('icon-palette3');
-    cardDecoration.classList.remove('color-palette1');
-    cardIcons.classList.remove('icon-palette1');
-    cardDecoration.classList.remove('color-palette2');
-    cardIcons.classList.remove('icon-palette2');
-    }
+function changePalette3() {
+  cardDecoration.classList.add('color-palette3');
+  cardIcons.classList.add('icon-palette3');
+  cardDecoration.classList.remove('color-palette1');
+  cardIcons.classList.remove('icon-palette1');
+  cardDecoration.classList.remove('color-palette2');
+  cardIcons.classList.remove('icon-palette2');
+}
 
 
 designTop.addEventListener('click', onClickDesignTop);
@@ -61,46 +61,49 @@ let inputJob = document.querySelector('#addjob');
 let cardFullName = document.querySelector('.card--full_name');
 let cardFullProfession = document.querySelector('.card--full_profession');
 
-function onClickFillTop(){
-    fillBottom.classList.toggle('fill--bottom--visible');
-    fillTop.classList.toggle('fill--top--active');
+function onClickFillTop() {
+  fillBottom.classList.toggle('fill--bottom--visible');
+  fillTop.classList.toggle('fill--top--active');
 }
 
-function print(evt){
-    if(evt.currentTarget.name === 'firstName') {
-        cardFullName.innerHTML = evt.currentTarget.value
-    }
-    if(evt.currentTarget.name === 'addjob') {
-        cardFullProfession.innerHTML = evt.currentTarget.value
-    }
+function print(evt) {
+  if (evt.currentTarget.name === 'firstName') {
+    cardFullName.innerHTML = evt.currentTarget.value
+  }
+  if (evt.currentTarget.name === 'addjob') {
+    cardFullProfession.innerHTML = evt.currentTarget.value
+  }
 };
 
 const FillIconPhone = document.querySelector('#icon1');
 const FillIconEmail = document.querySelector('#icon2');
 const FillIconLinkedin = document.querySelector('#icon3');
 const FillIconGithub = document.querySelector('#icon4');
-const FillInputPhone = document.querySelector('#addphone');
-const FillInputEmail = document.querySelector('#addemail');
-const FillInputLinkedin = document.querySelector('#addlinkedin');
-const FillInputGithub = document.querySelector('#addgithub');
+let FillInputPhone = document.querySelector('#addphone');
+let FillInputEmail = document.querySelector('#addemail');
+let FillInputLinkedin = document.querySelector('#addlinkedin');
+let FillInputGithub = document.querySelector('#addgithub');
 const FillButtonClose = document.querySelector('.fill--buttton');
 const FillFormBottom = document.querySelector('.fill--bottom');
 
-function chosenInput(){
-    return event.currentTarget;
+function chosenInput() {
+  return event.currentTarget;
 }
 
-function showIcon(event){
-const finalInput = chosenInput();
-if (finalInput===FillInputPhone){
+function showIcon(event) {
+  const finalInput = chosenInput();
+  if (finalInput === FillInputPhone) {
     FillIconPhone.classList.remove('hidden--fill')
-}if (finalInput===FillInputEmail){
+  }
+  if (finalInput === FillInputEmail) {
     FillIconEmail.classList.remove('hidden--fill')
-}if (finalInput===FillInputLinkedin){
+  }
+  if (finalInput === FillInputLinkedin) {
     FillIconLinkedin.classList.remove('hidden--fill')
-}if(finalInput===FillInputGithub){
+  }
+  if (finalInput === FillInputGithub) {
     FillIconGithub.classList.remove('hidden--fill')
-    }
+  }
 }
 
  
@@ -116,6 +119,7 @@ FillInputGithub.addEventListener('keypress', showIcon);
 
 // FILL AND ERRORS
 
+<<<<<<< HEAD
 const textErrorAll = document.querySelectorAll('.text-error');
 const inputFill = document.querySelectorAll('.input-fill');
 const fillForm = document.querySelectorAll('.fillform');
@@ -173,6 +177,26 @@ function storeLinkedin() {
 function storeGithub() {
     storedData.github = FillInputGithub.value, storeData()
   }
+=======
+//ESTOS BORRAR
+//let inputName = document.querySelector('#firstName');
+//let inputJob = document.querySelector('#addjob');
+//const FillInputEmail = document.querySelector('#addemail');
+//const FillInputLinkedin = document.querySelector('#addlinkedin');
+//const FillInputGithub = document.querySelector('#addgithub');
+//HASTA AQUÍ
+//const inputError = document.querySelector('#text-error');
+
+//if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputError.value)) {
+//  inputName.classList.remove('input-error');
+// inputError.classList.add('hidden');
+// return (true);
+//} else {
+//    inputEmail.classList.add('input-error');
+//  emailError.classList.remove('hidden');
+//  return (false);
+//}
+>>>>>>> 35785eabed1d15ed4db9a22a4f122adfc935f292
 
 
 //DESING COMPARTE
@@ -181,15 +205,92 @@ const shareTop = document.querySelector('.share--top');
 const shareBottom = document.querySelector('.share--bottom');
 const createCardContainer = document.querySelector('created-card--container');
 
-function onClickShareTop(){
-    shareBottom.classList.toggle('share--bottom--visible');
-    shareTop.classList.toggle('share--top--active');
+function onClickShareTop() {
+  shareBottom.classList.toggle('share--bottom--visible');
+  shareTop.classList.toggle('share--top--active');
 }
 
+<<<<<<< HEAD
 function onClickCreateButton(){
     createButton.classList.add('create-card--button--active');
     //createCardContainer.classList.add('created-card--container--visible');
+=======
+function onClickCreateButton() {
+  createButton.classList.add('create-card--button--active');
+  createCardContainer.classList.add('created-card--container--visible');
+>>>>>>> 35785eabed1d15ed4db9a22a4f122adfc935f292
 }
 
 shareTop.addEventListener('click', onClickShareTop);
 createButton.addEventListener('click', onClickCreateButton);
+
+
+
+// RESET BUTTON
+const resetButton = document.querySelector('.button--preview');
+
+function reset() {
+  
+  inputName.value = '';
+  inputJob.value = '';
+  FillInputPhone.value = '';
+  FillInputEmail.value = '';
+  FillInputGithub.value ='';  
+  FillInputLinkedin.value='';
+  cardFullName.innerHTML = 'Nombre Apellidos';
+  cardFullProfession.innerHTML = 'Front-end developer';
+  
+  
+  
+    FillIconPhone.classList.add('hidden--fill');
+    FillIconEmail.classList.add('hidden--fill');
+    FillIconLinkedin.classList.add('hidden--fill');
+    FillIconGithub.classList.add('hidden--fill');
+
+
+
+  
+  changePalette1()
+  showIcon(event) 
+  chosenInput()
+
+
+
+
+
+}
+
+
+
+
+
+
+
+resetButton.addEventListener('click', reset)
+
+
+
+
+
+/* 
+  
+  
+  
+    palette1.checked = true;
+
+    const imageUrl = './assets/images/profile-picture.gif';
+    profileImage.style.backgroundImage = `url(${imageUrl})`;
+    profilePreview.style.backgroundImage = `url(${imageUrl})`;
+
+    fillTelf();
+    fillEmail();
+    fillLinkedin();
+    fillGithub();
+    setTheme();
+
+    validateAll();
+    toggleDesign()
+
+    cardShare.classList.add('hidden'); */
+
+    //  cardIcons.classList.add('hidden');
