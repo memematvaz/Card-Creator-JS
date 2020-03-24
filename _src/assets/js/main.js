@@ -51,9 +51,8 @@ inputColorPalette1.addEventListener('change', changePalette1)
 inputColorPalette2.addEventListener('change', changePalette2)
 inputColorPalette3.addEventListener('change', changePalette3)
 
-
-
 //DESIGN SCRIPT
+
 const fillTop = document.querySelector('.fill--top');
 const fillBottom = document.querySelector('.fill--bottom');
 
@@ -104,6 +103,8 @@ if (finalInput===FillInputPhone){
     }
 }
 
+ 
+
 fillTop.addEventListener('click', onClickFillTop);
 inputName.addEventListener('keyup', print);
 inputJob.addEventListener('keyup', print);
@@ -115,32 +116,70 @@ FillInputGithub.addEventListener('keypress', showIcon);
 
 // FILL AND ERRORS
 
-//ESTOS BORRAR
-//let inputName = document.querySelector('#firstName');
-//let inputJob = document.querySelector('#addjob');
-//const FillInputEmail = document.querySelector('#addemail');
-//const FillInputLinkedin = document.querySelector('#addlinkedin');
-//const FillInputGithub = document.querySelector('#addgithub');
-//HASTA AQUÍ
-//const inputError = document.querySelector('#text-error');
+const textErrorAll = document.querySelectorAll('.text-error');
+const inputFill = document.querySelectorAll('.input-fill');
+const fillForm = document.querySelectorAll('.fillform');
+const createButton = document.querySelector('.create-card--button');
 
-//if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputError.value)) {
-  //  inputName.classList.remove('input-error');
-   // inputError.classList.add('hidden');
-   // return (true);
-//} else {
-//    inputEmail.classList.add('input-error');
-  //  emailError.classList.remove('hidden');
-  //  return (false);
-//}
+
+    function validateForm(){
+        
+     for(let myInput of inputFill){
+        if(myInput.value !==""){
+        myInput.classList.remove("input-error");
+        myInput.classList.add("input-correct");
+        }else{
+        myInput.classList.remove("input-correct");
+        myInput.classList.add("input-error");
+    }    
+    validateText(textErrorAll); 
+    }
+}
+    
+
+    function validateText(textErrorAll){
+        for(let myInput of inputFill){
+        for (let item of textErrorAll){
+            if (myInput.value === ""){
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        }
+        //myInput.addEventListener('keyup', validateForm);
+    }}
+
+
+
+createButton.addEventListener('click', validateForm);
+
+//STORE INPUT INFORMATION // HAY QUE DEFINIR LA FUNCIÓN
+
+function storeFullName() {
+    storedData.name = inputName.value, storeData()
+  }
+function storeJob() {
+    storedData.job = inputJob.value, storeData()
+  }
+function storeEmail() {
+   storedData.email = FillInputEmail.value, storeData()
+}
+function storeTelf() {
+    storedData.phone = FillInputPhone.value, storeData()
+  }
+function storeLinkedin() {
+   storedData.linkedin = FillInputLinkedin.value, storeData()
+}
+function storeGithub() {
+    storedData.github = FillInputGithub.value, storeData()
+  }
 
 
 //DESING COMPARTE
 
 const shareTop = document.querySelector('.share--top');
 const shareBottom = document.querySelector('.share--bottom');
-const createButton = document.querySelector('.create-card--button');
-const createCardContainer = document.querySelector('.created-card--container');
+const createCardContainer = document.querySelector('created-card--container');
 
 function onClickShareTop(){
     shareBottom.classList.toggle('share--bottom--visible');
@@ -149,7 +188,7 @@ function onClickShareTop(){
 
 function onClickCreateButton(){
     createButton.classList.add('create-card--button--active');
-    createCardContainer.classList.add('created-card--container--visible');
+    //createCardContainer.classList.add('created-card--container--visible');
 }
 
 shareTop.addEventListener('click', onClickShareTop);

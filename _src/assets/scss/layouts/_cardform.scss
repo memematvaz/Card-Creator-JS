@@ -256,7 +256,6 @@
   .fillform {
     text-align: left;
     color: $secondaryTextColor;
-    padding-top: 20px;
     font-size: 14px;
 
     ::placeholder {
@@ -268,13 +267,13 @@
 
     .label-fill {
       display: block;
+      margin-top:20px;
       padding-bottom: 7px;
     }
 
     .input-fill {
       width: 100%;
       height: 30px;
-      margin-bottom: 2px;
     }
 
     .bottom-2-box{
@@ -282,11 +281,9 @@
       align-items: center;
 
       .input-fill2 {
-        border: $ColorBorderIcon 1px solid;
         width: 30px;
         height: 30px;
         margin-left: 20px;
-        margin-bottom: 20px;
       }
 
       .buttonform--image {
@@ -298,7 +295,6 @@
         font-size: 14px;
         font-family: $mainFont;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-        margin-bottom: 20px;
       }
     }
   }
