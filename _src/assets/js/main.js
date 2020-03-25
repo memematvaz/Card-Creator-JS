@@ -291,31 +291,6 @@ for (var i = 0; i < inputValidation.length; i++) {
   inputValidation[i].addEventListener('keyup', validateAll);
 }
 
-//STORE INPUT INFORMATION // HAY QUE DEFINIR LA FUNCIÓN
-
-function storeFullName() {
-  storedData.name = inputName.value, storeData();
-}
-
-function storeJob() {
-  storedData.job = inputJob.value, storeData();
-}
-
-function storeEmail() {
-  storedData.email = FillInputEmail.value, storeData();
-}
-
-function storeTelf() {
-  storedData.phone = FillInputPhone.value, storeData();
-}
-
-function storeLinkedin() {
-  storedData.linkedin = FillInputLinkedin.value, storeData();
-}
-
-function storeGithub() {
-  storedData.github = FillInputGithub.value, storeData();
-}
 
 //DESING COMPARTE
 
