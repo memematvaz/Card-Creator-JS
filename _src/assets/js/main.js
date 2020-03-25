@@ -232,7 +232,7 @@ const imageInput = document.querySelector('#image-input');
 function validateImage() {
     const imageError = document.querySelector('#text-error_image');
     //const localStoredData = JSON.parse(localStorage.getItem('Details'));
-    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value) !== ''){
+    if (/\.(gif|jpeg|jpg|png)$/i.test(imageInput.value) === false){
         imageError.classList.remove('hidden');
         return (true);
     } else {
@@ -307,6 +307,7 @@ function onClickShareTop() {
 function onClickCreateButton() {
   // createButton.classList.add('create-card--button--active');
   createCardContainer.classList.add('created-card--container--visible');
+  sendData();
 }
 
 shareTop.addEventListener('click', onClickShareTop);
@@ -470,6 +471,16 @@ function storeGithub(){
     localInfo.github = FillInputGithub.value;
     storeData();
 }
+function onImageLoaded(event) {
+  localInfo.photo = event.target.result;
+  event.target.removeEventListener("load", onImageLoaded);
+  storeData();
+}
+function storePhoto() {
+  const reader  = new FileReader();
+  reader.addEventListener('load', onImageLoaded);
+  reader.readAsDataURL(imageInput.files[0]);
+}
 function storeData(){
     localStorage.setItem('Details', JSON.stringify(localInfo));
 }
@@ -573,6 +584,7 @@ FillInputEmail.addEventListener('change', storeEmail);
 FillInputPhone.addEventListener('change', storeTelf);
 FillInputLinkedin.addEventListener('change', storeLinkedin);
 FillInputGithub.addEventListener('change', storeGithub);
+imageInput.addEventListener('change', storePhoto);
 //btnReset.addEventListener('click', reset);
 
 
@@ -591,12 +603,12 @@ function sendData() {
       .then(response => response.json())
       .then(data => showURL(data))
       .catch(function (error) { console.log(error) })
-   shareLink(event); 
+   //shareLink(event); 
 }
 const responseURL = document.querySelector('.created-card--link')
 function showURL(data){
   if(data.success){
-    response.innerHTML = `<a class="final__link" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
+    responseURL.innerHTML = `<a class="final__link" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
   }else{
     responseURL.innerHTML= 'ERROR:' + data.error;
   }
