@@ -251,6 +251,7 @@ function validateAll() {
   } else {
     globalError.classList.remove('hidden');
 
+    validateForm()
     validateJob();
     validateName();
     validateEmail();
