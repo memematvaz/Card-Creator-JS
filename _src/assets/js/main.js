@@ -595,12 +595,11 @@ function sendData() {
 
     shareLink(event);
 }
-
-function showURL(result){
-    if(result.success){
-      responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+const responseURL = document.querySelector('.created-card--link')
+function showURL(data){
+    if(data.success){
+      responseURL.innerHTML = `<a class="final__link" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
     }else{
-      responseURL.innerHTML = 'ERROR:' + result.error;
+      responseURL.innerHTML = 'ERROR:' + data.error;
     }
   }
-
