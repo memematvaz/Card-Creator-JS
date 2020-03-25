@@ -66,14 +66,13 @@ function onClickFillTop() {
   fillTop.classList.toggle('fill--top--active');
 }
 
-function print(evt) {
-  if (evt.currentTarget.name === 'firstName') {
-    cardFullName.innerHTML = evt.currentTarget.value
+function printName() {
+    cardFullName.innerHTML = inputName.value;
   }
-  if (evt.currentTarget.name === 'addjob') {
-    cardFullProfession.innerHTML = evt.currentTarget.value
+
+function printJob() {
+      cardFullProfession.innerHTML = inputJob.value;
   }
-};
 
 const FillIconPhone = document.querySelector('#icon1');
 const FillIconEmail = document.querySelector('#icon2');
@@ -86,31 +85,34 @@ let FillInputGithub = document.querySelector('#addgithub');
 const FillButtonClose = document.querySelector('.fill--buttton');
 const FillFormBottom = document.querySelector('.fill--bottom');
 
-function chosenInput() {
-  return event.currentTarget;
-}
 
 function showIcon(event) {
-  const finalInput = chosenInput();
-  if (finalInput === FillInputPhone) {
-    FillIconPhone.classList.remove('hidden--fill')
+  if (FillInputPhone.value !== '') {
+    FillIconPhone.classList.remove('hidden--fill');
+  }else{
+    FillIconPhone.classList.add('hidden--fill');
   }
-  if (finalInput === FillInputEmail) {
+  if (FillInputEmail.value !== '') {
     FillIconEmail.classList.remove('hidden--fill')
+  }else{
+    FillIconEmail.classList.add('hidden--fill')
   }
-  if (finalInput === FillInputLinkedin) {
+  if (FillInputLinkedin !== '') {
     FillIconLinkedin.classList.remove('hidden--fill')
+  }else{
+    FillIconLinkedin.classList.add('hidden--fill')
   }
-  if (finalInput === FillInputGithub) {
+  if (FillInputGithub !== '') {
     FillIconGithub.classList.remove('hidden--fill')
+  }else{
+    FillIconGithub.classList.add('hidden--fill')
   }
 }
 
- 
 
 fillTop.addEventListener('click', onClickFillTop);
-inputName.addEventListener('keyup', print);
-inputJob.addEventListener('keyup', print);
+inputName.addEventListener('keyup', printName);
+inputJob.addEventListener('keyup', printJob);
 FillInputPhone.addEventListener('keypress', showIcon);
 FillInputEmail.addEventListener('keypress', showIcon);
 FillInputLinkedin.addEventListener('keypress', showIcon);
@@ -140,10 +142,7 @@ const emailError = document.querySelector('.text-error_email')
         myInput.classList.add("input-error");
         }   
         validateText();  
-    }
-    }
-
-    
+    }}
 
     function validateText(){
         if(FillInputEmail !== ''){
@@ -190,7 +189,7 @@ function onClickShareTop() {
 
 function onClickCreateButton() {
   createButton.classList.add('create-card--button--active');
-  createCardContainer.classList.add('created-card--container--visible');
+  //createCardContainer.classList.add('created-card--container--visible');
 }
 
 shareTop.addEventListener('click', onClickShareTop);
@@ -217,10 +216,227 @@ function reset() {
     FillIconGithub.classList.add('hidden--fill');
 
   changePalette1()
-  showIcon(event) 
+  showIcon(event) ;
   chosenInput()
 
 }
 
 
 resetButton.addEventListener('click', reset)
+
+//LOCAL STORAGE
+
+
+// Define variables to store data
+
+//const inputImage = document.querySelector('#image-input');
+
+let palette1Value = inputColorPalette1.value;
+let palette2Value = inputColorPalette2.value;
+let palette3Value = inputColorPalette3.value;
+
+let nameValue = inputName.value;
+let jobValue = inputJob.value;
+//let imageSource = inputImage.scr;
+let telfValue = FillInputPhone.value;
+let emailValue = FillInputEmail.value;
+let linkedinValue = FillInputLinkedin.value;
+let githubValue = FillInputGithub.value;
+
+let localInfo = { //storedData
+    palette: '',
+    name: '',
+    job: '',
+    photo: '',
+    email: '',
+    phone: '',
+    linkedin: '',
+    github: ''
+}
+
+
+function storePalette(){
+    if(inputColorPalette2.checked){
+        localInfo.palette = inputColorPalette2.value;
+        console.log(localInfo);
+    } else if (inputColorPalette3.checked){
+        localInfo.palette = inputColorPalette3.value;
+        console.log(localInfo);
+    }  else {
+        localInfo.palette = inputColorPalette1.value;
+        console.log(localInfo);
+    }
+    storeData();
+}
+
+function storeFullName(){
+    localInfo.name = inputName.value;
+    storeData();   
+}
+function storeJob(){
+    localInfo.job = inputJob.value;
+    storeData();
+}
+function storeEmail(){
+    localInfo.email = FillInputEmail.value;
+    storeData();
+}
+function storeTelf(){
+    localInfo.phone = FillInputPhone.value;
+    storeData();
+}
+function storeLinkedin(){
+    localInfo.linkedin = FillInputLinkedin.value;
+    storeData();
+}
+function storeGithub(){
+    localInfo.github =   FillInputGithub.value;
+    storeData();
+}
+function storeData(){
+    localStorage.setItem('Details', JSON.stringify(localInfo));
+}
+
+// function storeImage(){
+//     localInfo.image = inputImage.value;
+//     storeData();
+// }
+
+function checkLocalStorage (){
+    if (localStorage.getItem('Details')!== null){
+        retrieveData();
+        init();
+    }
+}
+
+function retrieveData(){
+    localInfo = JSON.parse(localStorage.getItem('Details'));
+    
+    if(localInfo.palette !== undefined){
+        if(localInfo.palette === inputColorPalette2.value){
+            inputColorPalette2.checked = true;
+            inputColorPalette1.checked = false;
+            inputColorPalette3.checked = false
+        } else if(localInfo.palette === inputColorPalette3.value){
+            inputColorPalette3.checked = true;
+            inputColorPalette2.checked = false;
+            inputColorPalette1.checked = false
+        } else{
+            inputColorPalette3.checked = false;
+            inputColorPalette2.checked = false;
+            inputColorPalette1.checked = true;
+        }
+    }
+    if (localInfo.name !== ''){
+        inputName.value = localInfo.name;
+    }
+    if (localInfo.job !== ''){
+        inputJob.value = localInfo.job;
+    }
+    if (localInfo.email !== ''){
+        FillInputEmail.value = localInfo.email;
+    }
+    if (localInfo.phone !== ''){
+        FillInputPhone.value= localInfo.phone;
+    }
+    if (localInfo.linkedin !== ''){
+        FillInputLinkedin.value = localInfo.linkedin;
+    }
+    if (localInfo.github !== ''){
+        FillInputGithub.value = localInfo.github;
+    }
+}
+
+function setTheme(){
+    if(inputColorPalette2.checked){
+        changePalette2();
+    } else if(inputColorPalette3.checked){
+        changePalette3();
+    } else {
+        changePalette1();
+    }
+}
+
+//function setImage(){
+  //  if (localInfo.photo !== ''){
+    //    profileImage.style.backgroundImage = `url(${localInfo.photo})`;
+    //    profilePreview.style.backgroundImage = `url(${storedData.photo})`;
+    //}
+//}
+
+function init(){
+    if(inputName.value === ''){
+        cardFullName.innerHTML = 'Nombre Apellidos';
+    } else {
+        printName();
+    }
+    if(inputJob.value === ''){
+        cardFullProfession.innerHTML = 'Front-end developer';
+    } else { 
+        printJob();
+    }
+    showIcon(event);
+    setTheme();
+    //setImage();
+}
+
+function reset(){
+    localStorage.removeItem('Details');
+    inputName.value = '';
+    inputJob.value = '';
+    FillInputEmail.value = '';
+    FillInputPhone.value = '';
+    FillInputLinkedin.value = '';
+    FillInputGithub.value = '';
+    cardFullName.innerHTML = 'Nombre Apellidos';
+    cardFullProfession.innerHTML = 'Front-end developer';
+    inputColorPalette1.checked = true;
+    //const imageUrl = './assets/images/profile-picture.gif';
+   // profileImage.style.backgroundImage = `url(${imageUrl})`;
+    //profilePreview.style.backgroundImage = `url(${imageUrl})`;
+    showIcon(event);
+    setTheme();
+    validateForm();
+    //cardShare.classList.add('hidden');
+}
+
+/// CARDSHARE A QUE SE REFIERE
+
+window.addEventListener('load', checkLocalStorage);
+inputColorPalette1.addEventListener('click', storePalette);
+inputColorPalette2.addEventListener('click', storePalette);
+inputColorPalette3.addEventListener('click', storePalette);
+inputName.addEventListener('change', storeFullName);
+inputJob.addEventListener('change', storeJob);
+FillInputEmail.addEventListener('change', storeEmail);
+FillInputPhone.addEventListener('change', storeTelf);
+FillInputLinkedin.addEventListener('change', storeLinkedin);
+FillInputGithub.addEventListener('change', storeGithub);
+//btnReset.addEventListener('click', reset);
+
+
+const urlBase = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
+//const cardLink = document.querySelector('#card-link');
+//let photoSend = '';
+
+function sendData() {
+    fetch(urlBase, {
+        method: 'POST',
+        body: localStorage.getItem('Details'),
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(data => showURL(data))
+        .catch(function (error) { console.log(error) })
+    shareLink(event);
+}
+
+function showURL(result){
+    if(result.success){
+      responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    }else{
+      responseURL.innerHTML = 'ERROR:' + result.error;
+    }
+  }
