@@ -78,31 +78,42 @@ const FillIconPhone = document.querySelector('#icon1');
 const FillIconEmail = document.querySelector('#icon2');
 const FillIconLinkedin = document.querySelector('#icon3');
 const FillIconGithub = document.querySelector('#icon4');
-let FillInputPhone = document.querySelector('#addphone');
+const FillInputPhone = document.querySelector('#addphone');
 const FillInputEmail = document.querySelector('#addemail');
-let FillInputLinkedin = document.querySelector('#addlinkedin');
-let FillInputGithub = document.querySelector('#addgithub');
+const FillInputLinkedin = document.querySelector('#addlinkedin');
+const FillInputGithub = document.querySelector('#addgithub');
 const FillButtonClose = document.querySelector('.fill--buttton');
 const FillFormBottom = document.querySelector('.fill--bottom');
 
 
-function showIcon(event) {
+function showIconPhone() {
   if (FillInputPhone.value !== '') {
     FillIconPhone.classList.remove('hidden--fill');
   }else{
     FillIconPhone.classList.add('hidden--fill');
   }
+}
+
+  
+function showIconEmail() {
   if (FillInputEmail.value !== '') {
     FillIconEmail.classList.remove('hidden--fill')
   }else{
     FillIconEmail.classList.add('hidden--fill')
   }
-  if (FillInputLinkedin !== '') {
+}
+
+function showIconLinkedin() {
+  if (FillInputLinkedin.value !== '') {
     FillIconLinkedin.classList.remove('hidden--fill')
   }else{
     FillIconLinkedin.classList.add('hidden--fill')
   }
-  if (FillInputGithub !== '') {
+}
+
+function showIconGithub() {
+  if (FillInputGithub.value !== '') {
+      
     FillIconGithub.classList.remove('hidden--fill')
   }else{
     FillIconGithub.classList.add('hidden--fill')
@@ -113,11 +124,10 @@ function showIcon(event) {
 fillTop.addEventListener('click', onClickFillTop);
 inputName.addEventListener('keyup', printName);
 inputJob.addEventListener('keyup', printJob);
-FillInputPhone.addEventListener('keypress', showIcon);
-FillInputEmail.addEventListener('keypress', showIcon);
-FillInputLinkedin.addEventListener('keypress', showIcon);
-FillInputGithub.addEventListener('keypress', showIcon);
-
+FillInputPhone.addEventListener('keypress', showIconPhone);
+FillInputEmail.addEventListener('keypress', showIconEmail);
+FillInputLinkedin.addEventListener('keypress', showIconLinkedin);
+FillInputGithub.addEventListener('keypress', showIconGithub);
 
 // FILL AND ERRORS
 
@@ -154,27 +164,6 @@ const emailError = document.querySelector('.text-error_email')
 
 
 createButton.addEventListener('click', validateForm);
-
-//STORE INPUT INFORMATION // HAY QUE DEFINIR LA FUNCIÓN
-
-function storeFullName() {
-    storedData.name = inputName.value, storeData()
-  }
-function storeJob() {
-    storedData.job = inputJob.value, storeData()
-  }
-function storeEmail() {
-   storedData.email = FillInputEmail.value, storeData()
-}
-function storeTelf() {
-    storedData.phone = FillInputPhone.value, storeData()
-  }
-function storeLinkedin() {
-   storedData.linkedin = FillInputLinkedin.value, storeData()
-}
-function storeGithub() {
-    storedData.github = FillInputGithub.value, storeData()
-  }
 
 //DESING COMPARTE
 
@@ -215,9 +204,13 @@ function reset() {
     FillIconLinkedin.classList.add('hidden--fill');
     FillIconGithub.classList.add('hidden--fill');
 
-  changePalette1()
-  showIcon(event) ;
-  chosenInput()
+    changePalette1();
+    showIconPhone();
+    showIconEmail();
+    showIconLinkedin();
+    showIconGithub();
+    setTheme();
+    chosenInput()
 
 }
 
@@ -375,7 +368,11 @@ function init(){
     } else { 
         printJob();
     }
-    showIcon(event);
+    showIconLinkedin();
+    showIconGithub();
+    showIconPhone();
+    showIconEmail();
+    
     setTheme();
     //setImage();
 }
@@ -394,7 +391,10 @@ function reset(){
     //const imageUrl = './assets/images/profile-picture.gif';
    // profileImage.style.backgroundImage = `url(${imageUrl})`;
     //profilePreview.style.backgroundImage = `url(${imageUrl})`;
-    showIcon(event);
+    showIconPhone();
+    showIconEmail();
+    showIconLinkedin();
+    showIconGithub();
     setTheme();
     validateForm();
     //cardShare.classList.add('hidden');
@@ -420,6 +420,7 @@ const urlBase = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card
 //let photoSend = '';
 
 function sendData() {
+
     fetch(urlBase, {
         method: 'POST',
         body: localStorage.getItem('Details'),
@@ -430,8 +431,10 @@ function sendData() {
         .then(response => response.json())
         .then(data => showURL(data))
         .catch(function (error) { console.log(error) })
+
     shareLink(event);
 }
+
 
 function showURL(result){
     if(result.success){
@@ -440,3 +443,4 @@ function showURL(result){
       responseURL.innerHTML = 'ERROR:' + result.error;
     }
   }
+
