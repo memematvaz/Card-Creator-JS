@@ -279,16 +279,24 @@
       margin-bottom: 20px;
     }
 
+    .action__hiddenField {
+      /* Ocultamos el input de tipo "file" porque no podemos 
+      darle los estilos que queremos */
+      display: none;
+    }
+
     .bottom-2-box {
       display: flex;
       align-items: center;
 
-      .input-fill2 {
-        border: $ColorBorderIcon 1px solid;
-        width: 30px;
-        height: 30px;
-        margin-left: 20px;
-        margin-bottom: 20px;
+      .thumbnail {
+      width: 30px;
+       height: 30px;
+      margin-left: 20px;
+      border: solid 1px;
+      background-image: url(../images/giphy.gif);
+      background-size: cover;
+      background-position: center;
       }
 
       .buttonform--image {

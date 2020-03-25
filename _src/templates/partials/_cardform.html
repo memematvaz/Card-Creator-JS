@@ -73,9 +73,12 @@
           </div>
           <div class="fillform bottom-2">
             <label class="label-fill" for="addimage">Imagen de perfil</label>
+            <input id="image-input" type="file" name="image" class="action__hiddenField js__profile-upload-btn"
+            required>
             <div class="bottom-2-box">
-              <button class="buttonform--image">Añadir imagen</button>
-              <input class="input-fill2" id="addimage" type="text" name="addimage" />
+              <button class="buttonform--image js__profile-trigger ">Añadir imagen</button>
+              <div class="thumbnail js__profile-preview"></div>
+              <p id="error-image" class="text-error hidden">Sube una imagen.</p>
             </div>
           </div>
           <div class="fillform bottom-3">
