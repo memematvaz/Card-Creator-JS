@@ -313,11 +313,11 @@ shareTop.addEventListener('click', onClickShareTop);
 createButton.addEventListener('click', onClickCreateButton);
 
 //TWITTER BUTTON
-const twitterButton = document.querySelector('.twitter--button');
-const twitterLink = document.querySelector('.twitter--link');
-const createCardLink = document.querySelector('.created-card--link');
-twitterLink.setAttribute('href',`https://twitter.com/intent/tweet?text=${createCardLink.innerText}`);
-twitterLink.setAttribute('target',"blank");
+// const twitterButton = document.querySelector('.twitter--button');
+// const twitterLink = document.querySelector('.twitter--link');
+// const createCardLink = document.querySelector('.created-card--link');
+// twitterLink.setAttribute('href',`https://twitter.com/intent/tweet?text=${createCardLink.innerText}`);
+// twitterLink.setAttribute('target',"blank");
 
 
 
@@ -581,26 +581,24 @@ const urlBase = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card
 //let photoSend = '';
 
 function sendData() {
-
-    fetch(urlBase, {
-        method: 'POST',
-        body: localStorage.getItem('Details'),
-        headers: {
-            'content-type': 'application/json'
-        }
-    })
-        .then(response => response.json())
-        .then(data => showURL(data))
-        .catch(function (error) { console.log(error) })
-
-    shareLink(event);
+  fetch(urlBase, {
+      method: 'GET',
+     // body: localStorage.getItem('Details'),
+      headers: {
+          'content-type': 'application/json'
+      }
+  })
+      .then(response => response.json())
+      .then(data => showURL(data))
+      .catch(function (error) { console.log(error) })
+  /* shareLink(event); */
 }
-
-function showURL(result){
-    if(result.success){
-      responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
-    }else{
-      responseURL.innerHTML = 'ERROR:' + result.error;
-    }
+const responseURL = document.querySelector('.created-card--link')
+function showURL(data){
+  if(data.success){
+    response.innerHTML = `<a class="final__link" href=${data.cardURL} target="_blank">${data.cardURL}</a>`;
+  }else{
+    responseURL.innerHTML= 'ERROR:' + data.error;
   }
+}
 
