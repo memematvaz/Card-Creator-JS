@@ -582,8 +582,8 @@ const urlBase = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card
 
 function sendData() {
   fetch(urlBase, {
-      method: 'GET',
-     // body: localStorage.getItem('Details'),
+      method: 'POST',
+      body: localStorage.getItem('Details'),
       headers: {
           'content-type': 'application/json'
       }
@@ -591,7 +591,7 @@ function sendData() {
       .then(response => response.json())
       .then(data => showURL(data))
       .catch(function (error) { console.log(error) })
-  /* shareLink(event); */
+   shareLink(event); 
 }
 const responseURL = document.querySelector('.created-card--link')
 function showURL(data){
