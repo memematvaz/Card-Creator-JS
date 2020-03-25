@@ -7,11 +7,11 @@ console.log('hola');
 
 const designTop = document.querySelector('.design--top');
 const designBottom = document.querySelector('.design--bottom');
-const inputColorPalette1 = document.querySelector('#color-option1')
-const inputColorPalette2 = document.querySelector('#color-option2')
-const inputColorPalette3 = document.querySelector('#color-option3')
-const cardDecoration = document.querySelector('#image--preview_text')
-const cardIcons = document.querySelector('#image--preview_icons')
+const inputColorPalette1 = document.querySelector('#color-option1');
+const inputColorPalette2 = document.querySelector('#color-option2');
+const inputColorPalette3 = document.querySelector('#color-option3');
+const cardDecoration = document.querySelector('#image--preview_text');
+const cardIcons = document.querySelector('#image--preview_icons');
 
 function onClickDesignTop() {
   designBottom.classList.toggle('design--bottom--visible');
@@ -171,20 +171,20 @@ function validateForm() {
 
 function validateName() {
   if (inputName.value === '') {
-    nameError.classList.remove('hidden')
+    nameError.classList.remove('hidden');
     return (false);
   } else {
-    nameError.classList.add('hidden')
+    nameError.classList.add('hidden');
     return (true);
   }
 }
 
 function validateJob() {
   if (inputJob.value === '') {
-    jobError.classList.remove('hidden')
+    jobError.classList.remove('hidden');
     return (false);
   } else {
-    jobError.classList.add('hidden')
+    jobError.classList.add('hidden');
     return (true);
   }
 }
@@ -238,12 +238,12 @@ function noDisableButton(event) {
  
 }
 
-createButton.addEventListener('click', onClickCreateButton)
+createButton.addEventListener('click', onClickCreateButton);
 
 function validateAll() {
   if (validateJob() === true && validateName() === true && validateEmail() === true && validateLinkedin() === true && validateGithub() === true) {
     globalError.classList.add('hidden');
-    noDisableButton()
+    noDisableButton();
     return true;
 
 
@@ -268,7 +268,7 @@ function validateAll() {
 
 // inputValidation.addEventListener('keyup', validateAll);
 //createButton.addEventListener('click', validateAll);
-console.log('inputValidation', inputValidation)
+console.log('inputValidation', inputValidation);
 for (var i = 0; i < inputValidation.length; i++) {
   inputValidation[i].addEventListener('keyup', validateAll);
 }
@@ -276,27 +276,27 @@ for (var i = 0; i < inputValidation.length; i++) {
 //STORE INPUT INFORMATION // HAY QUE DEFINIR LA FUNCIÓN
 
 function storeFullName() {
-  storedData.name = inputName.value, storeData()
+  storedData.name = inputName.value, storeData();
 }
 
 function storeJob() {
-  storedData.job = inputJob.value, storeData()
+  storedData.job = inputJob.value, storeData();
 }
 
 function storeEmail() {
-  storedData.email = FillInputEmail.value, storeData()
+  storedData.email = FillInputEmail.value, storeData();
 }
 
 function storeTelf() {
-  storedData.phone = FillInputPhone.value, storeData()
+  storedData.phone = FillInputPhone.value, storeData();
 }
 
 function storeLinkedin() {
-  storedData.linkedin = FillInputLinkedin.value, storeData()
+  storedData.linkedin = FillInputLinkedin.value, storeData();
 }
 
 function storeGithub() {
-  storedData.github = FillInputGithub.value, storeData()
+  storedData.github = FillInputGithub.value, storeData();
 }
 
 //DESING COMPARTE
@@ -338,11 +338,11 @@ function reset() {
   FillIconLinkedin.classList.add('hidden--fill');
   FillIconGithub.classList.add('hidden--fill');
 
-  changePalette1()
-  showIcon(event)
-  chosenInput()
+  changePalette1();
+  showIcon(event);
+  chosenInput();
 
 }
 
 
-resetButton.addEventListener('click', reset)
+resetButton.addEventListener('click', reset);

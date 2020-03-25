@@ -285,14 +285,31 @@
       height: 30px;
     }
 
+    .action__hiddenField {
+      /* Ocultamos el input de tipo "file" porque no podemos 
+      darle los estilos que queremos */
+      display: none;
+    }
+
     .bottom-2-box {
       display: flex;
       align-items: center;
 
+<<<<<<< HEAD
       .input-fill2 {
         width: 30px;
         height: 30px;
         margin-left: 20px;
+=======
+      .thumbnail {
+      width: 30px;
+       height: 30px;
+      margin-left: 20px;
+      border: solid 1px;
+      background-image: url(../images/giphy.gif);
+      background-size: cover;
+      background-position: center;
+>>>>>>> avatar
       }
 
       .buttonform--image {
