@@ -223,6 +223,23 @@ function validateGithub() {
   }
 }
 
+const imageInput = document.querySelector('#image-input');
+function validateImage() {
+    const imageError = document.querySelector('#text-error_image');
+    //const localStoredData = JSON.parse(localStorage.getItem('Details'));
+    if (/.(gif|jpeg|jpg|png)$/i.test(imageInput.value) !== ''){
+        imageError.classList.remove('hidden');
+        return (true);
+    } else {
+        imageError.classList.add('hidden');
+        return (false);
+    }
+}
+imageInput.addEventListener('change', validateImage);
+
+
+// VA JUSTO DESPUES DE (imageInput.value)|| localStoredData.photo !== '')
+
 function disabledButton() {
   createButton.disabled = true;
   createButton.classList.add('create-card--button--active');
@@ -258,7 +275,7 @@ function validateAll() {
     validateLinkedin();
     validateGithub();
     disabledButton();
-    //validateImage();
+    validateImage();
     return false;
   }
 
