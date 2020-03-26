@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Awesome profile-cards</title>
+        <link rel="icon" href="./favicon.png" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat:700|Open+Sans:400,600&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/form.css">
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="wrapper-general">
+                <div class="container"> <a class="image" href="./index.html#mainindex"></a> 
+                </div>
+            </div>
+        </header>
+        <main class="main-form">
+            <section class="card--preview">
+                <div class="box--preview">
+                    <button class="button--preview">
+                        <div class="button--preview_icon">
+                            <img src="./rubish.png">
+                        </div>
+                        <p class="button--preview_text">Reset</p>
+                    </button>
+                    <div class="image--preview">
+                        <div class="image--preview_text color-palette1" id="image--preview_text">
+                            <div class="preview--square"></div>
+                            <div class="card--full">
+                                 <h3 class="card--full_name">Nombre Apellido</h3> 
+                                <p class="card--full_profession">Front-end developer</p>
+                            </div>
+                        </div>
+                        <div class="image--preview_picture js__profile-image"></div>
+                        <div class="image--preview_icons icon-palette1" id="image--preview_icons">
+                            <div id="icon1" class="preview icon--1 hidden--fill"></div>
+                            <div id="icon2" class="preview icon--2 hidden--fill"></div>
+                            <div id="icon3" class="preview icon--3 hidden--fill"></div>
+                            <div id="icon4" class="preview icon--4 hidden--fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="card--form">
+                <div class="wrapper-general">
+                    <form class="complete--form">
+                        <div class="form__design">
+                            <div class="design--top">
+                                <div class="title-icon"> <i class="far fa-object-ungroup"></i> 
+                                     <h3 class="design-title">diseña</h3> 
+                                </div> <a class="arrow"></a> 
+                            </div>
+                            <div class="design--bottom">
+                                <p class="design-subtitle">colores</p>
+                                <div class="color-form">
+                                    <div>
+                                        <label id="lab-1" for="color-option1">
+                                            <input id="color-option1" type="radio" value="color-option1" name="color-option"
+                                            />
+                                            <div class="c1-1"></div>
+                                            <div class="c1-2"></div>
+                                            <div class="c1-3"></div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label id="lab-2" for="color-option2">
+                                            <input id="color-option2" type="radio" value="color-option2" name="color-option"
+                                            />
+                                            <div class="c2-1"></div>
+                                            <div class="c2-2"></div>
+                                            <div class="c2-3"></div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label id="lab-3" for="option3">
+                                            <input id="color-option3" type="radio" value="color-option3" name="color-option"
+                                            />
+                                            <div class="c3-1"></div>
+                                            <div class="c3-2"></div>
+                                            <div class="c3-3"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__fill">
+                            <div class="fill--top">
+                                <div class="title--icon"> <i class="far fa-keyboard fa-lg"></i> 
+                                     <h3 class="fill--title">Rellena</h3> 
+                                </div> <a class="fill--button">             <div class="arrow"> </div>           </a> 
+                            </div>
+                            <div class="fill--bottom">
+                                <div class="fillform bottom-1">
+                                    <div class="fillform--name">
+                                        <label class="label-fill" for="firstName">Nombre completo<span class="required">*</span>
+
+                                        </label>
+                                        <input placeholder="Sally Jill" id="firstName" type="text" name="firstName"
+                                        class="input-fill input-validation" required />
+                                        <p class="text-error hidden" id="text-error_name">*Dinos tu nombre por favor</p>
+                                    </div>
+                                    <div class="fillform--job">
+                                        <label class="label-fill" for="addjob">Puesto<span class="required">*</span>
+
+                                        </label>
+                                        <input placeholder="Front-end unicorn" id="addjob" type="text" name="addjob"
+                                        class="input-fill input-validation" required />
+                                        <p class="text-error hidden" id="text-error_job">*Tu trabajo también, gracias</p>
+                                    </div>
+                                </div>
+                                <div class="fillform bottom-2">
+                                    <label class="label-fill" for="addimage">Imagen de perfil<span class="required">*</span>
+
+                                    </label>
+                                    <div class="bottom-2-box">
+                                        <button class="buttonform--image js__profile-trigger">Añadir imagen</button>
+                                        <div class="thumbnail js__profile-preview"></div>
+                                        <p class="text-error hidden" id="text-error_image">*Sube una imagen.</p>
+                                        <label class="label-fill" for="addimage"></label>
+                                        <input id="image-input" type="file" name="image" class="action__hiddenField js__profile-upload-btn"
+                                        required>
+                                    </div>
+                                    <div class="fillform bottom-3">
+                                        <div class="fillform--email">
+                                            <label class="label-fill" for="addemail">Email<span class="required">*</span>
+
+                                            </label>
+                                            <input placeholder="sally-hill@gmail.com" id="addemail" type="email" name="addemail"
+                                            class="input-fill input-validation" required />
+                                            <p class="text-error hidden" id="text-error_email">*Dejanos tu email para que puedan contactarte.</p>
+                                        </div>
+                                        <div class="fillform--phone">
+                                            <label class="label-fill" for="addphone">Teléfono</label>
+                                            <input placeholder="660632407" class="input-fill input-correct input-validation"
+                                            id="addphone" type="tel" name="addphone" />
+                                        </div>
+                                        <div class="fillform--linkedin">
+                                            <label class="label-fill" for="addlinkedin">Linkedin<span class="required">*</span>
+
+                                            </label>
+                                            <input placeholder="linkedin.com/in/unicornfront" id="addlinkedin" type="text"
+                                            name="addlinkedin" class="input-fill input-validation" required />
+                                            <p class="text-error hidden" id="text-error_linkedin">*Por favor introduce tu Linkedin</p>
+                                        </div>
+                                        <div class="fillform--github">
+                                            <label class="label-fill" for="addgithub">Github<span class="required">*</span>
+
+                                            </label>
+                                            <input placeholder="@sallyhill" id="addgithub" type="text" name="addgithub"
+                                            class="input-fill input-validation" required />
+                                            <p class="text-error hidden" id="text-error_git">*Agradeceran ver tu trabajo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__share">
+                                <div class="share--top">
+                                    <div class="share--icon"> <i class="fas fa-share-alt"></i> 
+                                         <h3 class="share--title">comparte</h3> 
+                                    </div> <a class="share--button">             <div class="arrow"> </div>           </a> 
+                                </div>
+                                <div class="share--bottom">
+                                    <p id="global-error" class="text-error hidden">Revisa los campos marcados en rojo.</p>
+                                    <button class="create-card--button"
+                                    type="button"> <i class="far fa-address-card"></i> Crear tarjeta</button>
+                                    <div class="border--line"></div>
+                                    <div class="created-card--container">
+                                         <h4 class="created-card--title">La tarjeta ha sido creada:</h4>  <a href="" class="created-card--link" title="Tarjeta de perfil"></a> 
+                                        <div
+                                        class="twitter--button"> <a href="https://adalab.es/" class="twitter--link" title="Compartir en twitter"><i                   class="fab fa-twitter"></i>Compartir en twitter</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <div class="border--line"></div>
+        <footer class="wrapperFooter">
+            <div class="footer__container">
+                 <h3 class="footer__container--title">Awesome profile-cards @2020</h3> 
+                <div class="footer__container--logo"> <a class="logo-container" href="#" title="logo Adalab">          <img src="./assets/images/logo-adalab.png" alt="Logo Adalab" title="Logo Adalab">       </a> 
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="./assets/js/main.js"></script>
+    </body>
+
+</html>
