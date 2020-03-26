@@ -583,8 +583,6 @@ imageInput.addEventListener('change', storePhoto);
 
 
 const urlBase = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
-//const cardLink = document.querySelector('#card-link');
-//let photoSend = '';
 
 function sendData() {
   fetch(urlBase, {
@@ -597,7 +595,7 @@ function sendData() {
     .then(response => response.json())
     .then(data => showURL(data))
     .catch(function (error) { console.log(error) })
-  //shareLink(event); 
+  
 }
 const responseURL = document.querySelector('.created-card--link')
 function showURL(data) {
